@@ -242,10 +242,11 @@
     setText("contact-summary", data.summary, "");
     setText("contact-location", data.location, "");
     byId("social-links").innerHTML = (data.socials || []).map(function (item) {
+      const iconMarkup = item.icon ? icon(item.icon) : "";
       if (!item.href) {
         return [
           '<div class="social-link social-text">',
-          icon(item.icon),
+          iconMarkup,
           "<span>" + escapeHtml(item.label || "Contact") + "</span>",
           "</div>"
         ].join("");
@@ -254,7 +255,7 @@
       const href = item.href;
       return [
         '<a class="social-link" href="' + escapeAttr(href) + '"' + linkAttrs(href) + ">",
-        icon(item.icon),
+        iconMarkup,
         "<span>" + escapeHtml(item.label || "Link") + "</span>",
         "</a>"
       ].join("");

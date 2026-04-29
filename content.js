@@ -226,7 +226,7 @@ window.PORTFOLIO_CONTENT = {
     location: "University of New Haven",
     socials: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/hassan-jannan-7a652431b/", icon: "linkedin" },
-      { label: "hassanjannan1234@gmail.com", icon: "mail" }
+      { label: "hassanjannan1234@gmail.com" }
     ]
   },
   footerNote: ""
