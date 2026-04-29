@@ -226,8 +226,7 @@ window.PORTFOLIO_CONTENT = {
     location: "University of New Haven",
     socials: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/hassan-jannan-7a652431b/", icon: "linkedin" },
-      { label: "CEPHEUS", href: "https://itsupiki-okami.itch.io/cepheus", icon: "globe" },
-      { label: "Gnome & Golem", href: "https://marvinooo.itch.io/gnomegolem", icon: "globe" }
+      { label: "Email", href: "hassanjannan1234@gmail.com", icon: "globe" }
     ]
   },
   footerNote: ""
