@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hassan Jannan | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js"></script>
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <header class="navbar" id="site-nav">
+    <div class="container nav-inner">
+      <a href="#hero" class="brand" id="brand-link" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text" id="brand-name">Your Name</span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-menu" aria-label="Primary">
+        <ul class="nav-links" id="nav-links"></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="hero">
+      <div class="hero-wash hero-wash-a" aria-hidden="true"></div>
+      <div class="hero-wash hero-wash-b" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" id="hero-role"></p>
+
+          <div class="hero-heading-row">
+            <h1 class="hero-title" id="hero-title"></h1>
+            <aside class="contact-bubble reveal" id="contact-bubble">
+              <p class="contact-bubble-label" id="contact-bubble-label"></p>
+              <p class="contact-bubble-copy" id="contact-bubble-copy"></p>
+              <a class="contact-bubble-link" id="contact-bubble-link" href="#contact"></a>
+            </aside>
+          </div>
+
+          <p class="hero-summary" id="hero-summary"></p>
+          <div class="hero-actions" id="hero-actions"></div>
+        </div>
+
+        <div class="hero-lower">
+          <section class="skills-panel reveal" aria-labelledby="skills-heading">
+            <div class="panel-header">
+              <p class="section-kicker" id="skills-kicker">Core Stack</p>
+            </div>
+            <div class="skill-ribbon" id="skill-ribbon"></div>
+          </section>
+
+          <aside class="profile-card reveal" aria-labelledby="highlights-kicker">
+            <div class="profile-visual">
+              <img id="hero-image" src="assets/profile-placeholder.svg" alt="Profile placeholder">
+            </div>
+            <div class="profile-meta">
+              <div class="profile-copy">
+                <p class="section-kicker" id="highlights-kicker">Quick Snapshot</p>
+                <div class="highlights-grid" id="highlights-grid"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="expertise">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="section-kicker" id="expertise-kicker">Core Expertise</p>
+          <h2 id="expertise-title">Capabilities that anchor the work.</h2>
+        </div>
+        <div class="card-grid expertise-grid" id="expertise-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="section-kicker" id="experience-kicker">Experience</p>
+          <h2 id="experience-title">How the story has unfolded so far.</h2>
+        </div>
+        <div class="timeline" id="experience-list"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="section-kicker" id="education-kicker">Education</p>
+          <h2 id="education-title">Training, craft, and steady refinement.</h2>
+        </div>
+        <div class="card-grid education-grid" id="education-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="section-kicker" id="projects-kicker">Selected Work</p>
+          <h2 id="projects-title">A portfolio grid you can actually tailor.</h2>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <p class="section-kicker" id="contact-kicker">Contact</p>
+            <h2 id="contact-heading"></h2>
+            <p class="contact-summary" id="contact-summary"></p>
+            <p class="contact-location" id="contact-location"></p>
+          </div>
+          <div class="social-links" id="social-links"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p id="footer-note"></p>
+      <p class="footer-meta"><span id="copyright-year"></span> <span id="footer-name"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

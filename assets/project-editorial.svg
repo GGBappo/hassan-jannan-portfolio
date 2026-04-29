@@ -1,0 +1,24 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#0F1723"/>
+  <rect x="70" y="70" width="1460" height="860" rx="28" fill="url(#paint0_linear)"/>
+  <rect x="140" y="160" width="520" height="560" rx="20" fill="#182333"/>
+  <rect x="200" y="232" width="360" height="30" rx="10" fill="#F0B56B"/>
+  <rect x="200" y="292" width="260" height="92" rx="16" fill="#9AE6B4" fill-opacity="0.18"/>
+  <rect x="200" y="414" width="330" height="24" rx="12" fill="#A7B3C8" fill-opacity="0.28"/>
+  <rect x="200" y="458" width="300" height="24" rx="12" fill="#A7B3C8" fill-opacity="0.18"/>
+  <rect x="200" y="502" width="240" height="24" rx="12" fill="#A7B3C8" fill-opacity="0.18"/>
+  <rect x="840" y="160" width="600" height="320" rx="24" fill="#1D2B40"/>
+  <rect x="920" y="238" width="440" height="168" rx="18" fill="#9AE6B4" fill-opacity="0.16"/>
+  <rect x="760" y="550" width="680" height="220" rx="24" fill="#121C2A"/>
+  <rect x="824" y="620" width="210" height="26" rx="13" fill="#9AE6B4"/>
+  <rect x="1068" y="620" width="290" height="26" rx="13" fill="#A7B3C8" fill-opacity="0.18"/>
+  <rect x="824" y="676" width="520" height="22" rx="11" fill="#A7B3C8" fill-opacity="0.18"/>
+  <text x="150" y="118" fill="#9AE6B4" font-family="Arial, sans-serif" font-size="28" font-weight="700">EDITORIAL COMMERCE PLACEHOLDER</text>
+  <text x="140" y="882" fill="#A7B3C8" font-family="Arial, sans-serif" font-size="28">Replace with a product launch, campaign, or portfolio screenshot.</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="138" y1="98" x2="1419" y2="883" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#15202F"/>
+      <stop offset="1" stop-color="#0B1017"/>
+    </linearGradient>
+  </defs>
+</svg>

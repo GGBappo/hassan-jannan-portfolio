@@ -1,0 +1,16 @@
+<svg width="960" height="1200" viewBox="0 0 960 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="1200" fill="#101724"/>
+  <rect x="54" y="54" width="852" height="1092" rx="24" fill="url(#paint0_linear)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <circle cx="480" cy="388" r="158" fill="#1D2B40"/>
+  <path d="M292 888C292 751.072 402.072 641 539 641H421C557.928 641 668 751.072 668 888V930H292V888Z" fill="#1A2433"/>
+  <rect x="188" y="964" width="584" height="74" rx="10" fill="#182333"/>
+  <rect x="248" y="989" width="464" height="24" rx="12" fill="#9AE6B4" fill-opacity="0.18"/>
+  <text x="480" y="160" fill="#9AE6B4" font-family="Arial, sans-serif" font-size="30" font-weight="700" text-anchor="middle">REPLACE WITH YOUR PHOTO</text>
+  <text x="480" y="1092" fill="#A7B3C8" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Drop in a portrait or screenshot and update content.js</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="131" y1="86" x2="795" y2="1135" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162131"/>
+      <stop offset="1" stop-color="#0F1723"/>
+    </linearGradient>
+  </defs>
+</svg>

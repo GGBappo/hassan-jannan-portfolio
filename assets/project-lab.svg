@@ -1,0 +1,24 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#0B1017"/>
+  <rect x="84" y="84" width="1432" height="832" rx="28" fill="url(#paint0_linear)"/>
+  <rect x="154" y="154" width="1292" height="220" rx="24" fill="#182333"/>
+  <rect x="154" y="430" width="410" height="416" rx="24" fill="#121C2A"/>
+  <rect x="596" y="430" width="410" height="416" rx="24" fill="#121C2A"/>
+  <rect x="1038" y="430" width="408" height="416" rx="24" fill="#121C2A"/>
+  <rect x="228" y="244" width="310" height="28" rx="14" fill="#9AE6B4"/>
+  <rect x="582" y="244" width="400" height="26" rx="13" fill="#A7B3C8" fill-opacity="0.18"/>
+  <rect x="228" y="514" width="262" height="28" rx="14" fill="#F0B56B"/>
+  <rect x="670" y="514" width="220" height="28" rx="14" fill="#9AE6B4"/>
+  <rect x="1108" y="514" width="204" height="28" rx="14" fill="#F0B56B"/>
+  <rect x="228" y="586" width="244" height="152" rx="20" fill="#1D2B40"/>
+  <rect x="670" y="586" width="260" height="152" rx="20" fill="#1D2B40"/>
+  <rect x="1108" y="586" width="250" height="152" rx="20" fill="#1D2B40"/>
+  <text x="154" y="128" fill="#9AE6B4" font-family="Arial, sans-serif" font-size="28" font-weight="700">SITE SYSTEM PLACEHOLDER</text>
+  <text x="154" y="890" fill="#A7B3C8" font-family="Arial, sans-serif" font-size="28">Great spot for a modular web system, style guide, or portfolio kit preview.</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="136" y1="112" x2="1457" y2="904" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121B29"/>
+      <stop offset="1" stop-color="#0D131C"/>
+    </linearGradient>
+  </defs>
+</svg>

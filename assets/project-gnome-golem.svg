@@ -1,0 +1,22 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#0B1017"/>
+  <rect x="72" y="72" width="1456" height="856" rx="28" fill="url(#paint0_linear)"/>
+  <circle cx="1340" cy="210" r="132" fill="#F0B56B" fill-opacity="0.12"/>
+  <path d="M138 768C266 662 386 586 514 558C700 517 796 589 926 602C1100 620 1230 532 1454 354" stroke="#9AE6B4" stroke-width="20" stroke-linecap="round"/>
+  <rect x="170" y="180" width="314" height="442" rx="30" fill="#132033"/>
+  <rect x="248" y="250" width="158" height="158" rx="79" fill="#9AE6B4" fill-opacity="0.16"/>
+  <rect x="564" y="224" width="360" height="188" rx="24" fill="#182333"/>
+  <rect x="1000" y="194" width="354" height="336" rx="28" fill="#1D2B40"/>
+  <rect x="224" y="684" width="1180" height="124" rx="24" fill="#0F1723"/>
+  <rect x="286" y="730" width="226" height="28" rx="14" fill="#F0B56B"/>
+  <rect x="548" y="730" width="242" height="28" rx="14" fill="#9AE6B4"/>
+  <rect x="826" y="730" width="222" height="28" rx="14" fill="#F0B56B"/>
+  <text x="170" y="136" fill="#9AE6B4" font-family="Arial, sans-serif" font-size="28" font-weight="700">GNOME &amp; GOLEM</text>
+  <text x="170" y="862" fill="#A7B3C8" font-family="Arial, sans-serif" font-size="28">Fantasy puzzle project placeholder for your portfolio card.</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="120" y1="108" x2="1436" y2="910" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#121B28"/>
+      <stop offset="1" stop-color="#0D141E"/>
+    </linearGradient>
+  </defs>
+</svg>
