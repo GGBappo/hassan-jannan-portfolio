@@ -784,6 +784,17 @@ p {
   border-color: rgba(var(--accent-rgb), 0.34);
 }
 
+.social-text {
+  cursor: default;
+}
+
+.social-text:hover,
+.social-text:focus-visible {
+  transform: none;
+  background: rgba(var(--accent-rgb), 0.08);
+  border-color: rgba(var(--accent-rgb), 0.22);
+}
+
 .footer {
   padding: 1.2rem 0 2.5rem;
 }

@@ -242,7 +242,16 @@
     setText("contact-summary", data.summary, "");
     setText("contact-location", data.location, "");
     byId("social-links").innerHTML = (data.socials || []).map(function (item) {
-      const href = item.href || "#hero";
+      if (!item.href) {
+        return [
+          '<div class="social-link social-text">',
+          icon(item.icon),
+          "<span>" + escapeHtml(item.label || "Contact") + "</span>",
+          "</div>"
+        ].join("");
+      }
+
+      const href = item.href;
       return [
         '<a class="social-link" href="' + escapeAttr(href) + '"' + linkAttrs(href) + ">",
         icon(item.icon),
