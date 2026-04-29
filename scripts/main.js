@@ -106,8 +106,10 @@
     contactLink.textContent = data.contactLinkLabel || data.email || "Contact";
 
     const heroImage = byId("hero-image");
-    heroImage.src = data.heroImage || "assets/profile-placeholder.svg";
-    heroImage.alt = (data.name || "Profile") + " image";
+    if (heroImage) {
+      heroImage.src = data.heroImage || "assets/profile-placeholder.svg";
+      heroImage.alt = (data.name || "Profile") + " image";
+    }
 
     byId("skill-ribbon").innerHTML = (data.skills || []).map(function (item) {
       return '<span class="skill-pill">' + escapeHtml(item) + "</span>";

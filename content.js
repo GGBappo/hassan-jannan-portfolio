@@ -53,7 +53,6 @@ window.PORTFOLIO_CONTENT = {
     contactCopy: "I am interested in game development opportunities, collaborative projects, and conversations with other developers.",
     contactHref: "https://www.linkedin.com/in/hassan-jannan-7a652431b/",
     contactLinkLabel: "Connect on LinkedIn",
-    heroImage: "assets/profile-placeholder.svg",
     actions: [
       { label: "View Projects", href: "#projects", style: "primary", icon: "arrow-up-right" },
       { label: "LinkedIn", href: "https://www.linkedin.com/in/hassan-jannan-7a652431b/", style: "secondary", icon: "linkedin" }
@@ -196,7 +195,7 @@ window.PORTFOLIO_CONTENT = {
         "Assisted with building the minigames.",
         "Unfinished due to time constraints, learned about scope creep and how to prevent it and plan better."
       ],
-      image: "assets/project-cepheus.svg",
+      image: "assets/cepheus-cover.png",
       tags: ["Unity", "Game Jam", "Narrative"],
       links: [
         { label: "View Project", href: "https://itsupiki-okami.itch.io/cepheus", icon: "arrow-up-right", style: "primary" }
@@ -213,7 +212,7 @@ window.PORTFOLIO_CONTENT = {
           "Had assistance in creating the throwing of the gnome.",
           "Learned more about Unity's input systems and Tweening/Lerping."
       ],
-      image: "assets/project-gnome-golem.svg",
+      image: "assets/gnome-golem-cover.png",
       tags: ["Unity", "Puzzle", "Team Project"],
       links: [
         { label: "View Project", href: "https://marvinooo.itch.io/gnomegolem", icon: "arrow-up-right", style: "primary" }
