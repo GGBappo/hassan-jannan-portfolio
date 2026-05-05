@@ -170,29 +170,44 @@ window.PORTFOLIO_CONTENT = {
       featured: true,
       category: "Game Jam Project",
       title: "CEPHEUS",
-      description: "A narrative-driven space project about a man transported into his delusions, navigating space to uncover a darker truth about humanity.",
+      description: "A narrative-driven game jam project where I helped build dialogue, NPC interaction systems, and collaborative gameplay features for a surreal space story.",
       detailsHeading: "What I worked on",
       details: [
-        "Worked on narrative dialogue systems using ScriptableObjects, later improving them with Unity Events.",
-        "Helped plan, organize, and direct the project.",
-        "Assisted with building the minigames.",
-        "Unfinished due to time constraints, learned about scope creep and how to prevent it and plan better."
+        "Built a modular dialogue system in Unity using ScriptableObjects to keep dialogue data clean, scalable, and easy to expand.",
+        "Implemented NPC interaction logic with hitbox triggers and player input checks so conversations only start at the right time.",
+        "Created a DialogueNPCManager setup so each NPC could manage its own conversation flow independently.",
+        "Helped organize the team, support minigame work, and keep the project moving during a one-week jam."
       ],
       detailOverview: [
-        "CEPHEUS was built as a story-focused game jam project with an emphasis on atmosphere, mystery, and the player's shifting understanding of what is real.",
-        "My role crossed both design and implementation, which meant helping shape the structure of the experience while also building systems that supported the narrative."
+        "CEPHEUS was built during the Strange Places game jam as a story-focused experience centered on atmosphere, mystery, and the player's shifting understanding of what is real.",
+        "My main contribution was building the dialogue and NPC interaction foundation that helped carry the narrative side of the project. I focused on making the system modular so the team could create and manage multiple conversations without hardcoding dialogue into every scene.",
+        "As the week went on, I also helped with project direction and supported other gameplay work, which gave me a better sense of how technical decisions and team coordination affect the final build during a short production cycle."
       ],
       learnings: [
-        "Strong scope control matters, especially when narrative systems and minigames both compete for time.",
-        "Switching from an early ScriptableObject approach to Unity Events gave the dialogue flow more flexibility.",
-        "Planning dependencies earlier would have made the narrative and gameplay pieces connect more smoothly.",
-        "Leadership during a jam is as much about keeping the team focused as it is about writing code."
+        "Rapid prototyping works better when systems are modular from the beginning, especially in a short game jam.",
+        "NPC dialogue tools need clean ownership between player input, proximity checks, and conversation data to stay manageable.",
+        "Scope control matters a lot when narrative systems, minigames, and polish all compete for limited time.",
+        "Game jams taught me that leadership is not just building systems, but also helping the team stay focused and realistic."
       ],
       media: [
         {
           src: "assets/cepheus-cover.png",
           alt: "CEPHEUS cover art",
           caption: "Official cover art used for the project's public page."
+        },
+        {
+          src: "https://dms.licdn.com/playlist/vid/v2/D4E05AQGO54x4FIU66g/thumbnail-with-play-button-overlay-high/B4EZxx.jVSIsDU-/0/1771438752073?e=2147483647&v=beta&t=ORq5jqhMZRmngb5tjxi6m0LmwoRckpI77NncUXKdFXw",
+          alt: "CEPHEUS LinkedIn development clip thumbnail",
+          caption: "LinkedIn progress update showing the dialogue and NPC interaction work in progress.",
+          href: "https://www.linkedin.com/feed/update/urn:li:activity:7429952672713048064/",
+          linkLabel: "Open LinkedIn clip"
+        },
+        {
+          src: "https://dms.licdn.com/playlist/vid/v2/D4E05AQHbFftVcJwuBQ/thumbnail-with-play-button-overlay-high/B4EZyMiONtHMDU-/0/1771884309766?e=2147483647&v=beta&t=HV-lGT3rnEQM3snchy8LhNjl2r8R6vV1TafO4_tME3E",
+          alt: "CEPHEUS final LinkedIn clip thumbnail",
+          caption: "LinkedIn wrap-up post with a clip from the final jam build.",
+          href: "https://www.linkedin.com/feed/update/urn:li:activity:7431821485213782016/",
+          linkLabel: "Watch final clip on LinkedIn"
         },
         {
           src: "https://img.itch.zone/aW1hZ2UvNDMxMzA4MS8yNTczNTYyNy5wbmc=/794x1000/wIUx96.png",
@@ -209,7 +224,7 @@ window.PORTFOLIO_CONTENT = {
       tags: ["Unity", "Game Jam", "Narrative"],
       links: [
         { label: "View Project", href: "https://itsupiki-okami.itch.io/cepheus", icon: "arrow-up-right", style: "primary" },
-        { label: "Case Study", href: "project.html?project=cepheus", icon: "layers", style: "secondary", newTab: true }
+        { label: "Case Study", href: "project.html?project=cepheus", icon: "layers", style: "secondary" }
       ]
     },
     {
@@ -217,29 +232,45 @@ window.PORTFOLIO_CONTENT = {
       featured: true,
       category: "Puzzle Adventure",
       title: "Gnome & Golem",
-      description: "A puzzle game centered on an indestructible golem helping a nervous gnome through a dangerous forest.",
+      description: "A two-character puzzle game where I built core gameplay, movement, switching, and level systems around the relationship between the gnome and the golem.",
       detailsHeading: "What I worked on",
       details: [
-        "Worked on the main gameplay systems and level design.",
-        "Built the core mechanics for both the gnome and the golem.",
-        "Collaborated on the gnome-throwing mechanic.",
-        "Learned more about Unity's input systems and Tweening/Lerping."
+        "Built core gameplay systems for both characters, including movement, controls, and the feel of switching between them.",
+        "Designed the golem's protective mechanics, including bracing, blocking, and supporting safe path creation.",
+        "Implemented checkpoints, level systems, and level-building work to support puzzle progression.",
+        "Collaborated on the gnome-throwing mechanic, gameplay integration, UI work, and overall level flow."
       ],
       detailOverview: [
-        "Gnome & Golem centered on cooperative-feeling puzzle mechanics built around two very different characters, which made interaction design and level flow especially important.",
-        "I focused on creating the moment-to-moment gameplay systems that gave both characters clear identities while still making them feel connected."
+        "Gnome & Golem was developed during a game jam around the theme Invincible. The concept was a 2D puzzle platformer where players guide a fragile gnome girl through hazards by using an indestructible golem's abilities.",
+        "My role centered on the core gameplay experience. I worked on character controls, movement systems, checkpoints, switching, and level implementation so the puzzle flow could feel clear and responsive.",
+        "I also had the chance to collaborate with other developers on shared mechanics and learn from more experienced Unity developers, which made this project especially valuable from both a technical and teamwork perspective."
       ],
       learnings: [
-        "Mechanic clarity matters more when players are switching between multiple character abilities.",
-        "Level design gets stronger when you test puzzle ideas alongside the actual movement and interaction systems.",
-        "Polish systems like input handling, tweening, and movement transitions have a huge effect on how puzzle games feel.",
-        "Shared mechanics benefit from clear ownership and communication when multiple teammates are contributing."
+        "Unity's newer Input System can make multi-character control cleaner, but it needs careful setup to stay readable and flexible.",
+        "Tweening, lerping, and movement polish have a huge impact on how puzzle mechanics feel in the player's hands.",
+        "Level design gets better when mechanics and puzzle layouts are tested together instead of in isolation.",
+        "I came away with a better understanding of modular systems, scene management, and how to structure gameplay code for iteration.",
+        "Game jams are great at revealing where polish, testing, and bug fixing need more time than you expect."
       ],
       media: [
         {
           src: "assets/gnome-golem-cover.png",
           alt: "Gnome and Golem cover art",
           caption: "Official cover art used for the project's public page."
+        },
+        {
+          src: "https://dms.licdn.com/playlist/vid/v2/D4E05AQFpfMA92ygjpg/thumbnail-with-play-button-overlay-high/B4EZ1uTtoLG8DU-/0/1775672158498?e=2147483647&v=beta&t=QZ9cOIva89pHNDVejkJQNt_KZp_4wlnkIByR7lF5jys",
+          alt: "Gnome and Golem progress clip thumbnail",
+          caption: "LinkedIn development update focused on the core mechanics and puzzle setup.",
+          href: "https://www.linkedin.com/feed/update/urn:li:activity:7447708868794544128/",
+          linkLabel: "Open development clip"
+        },
+        {
+          src: "https://dms.licdn.com/playlist/vid/v2/D4E05AQHGYJN95FV6fA/thumbnail-with-play-button-overlay-high/B4EZ2rgjnuHUDU-/0/1776698938157?e=2147483647&v=beta&t=kjXIkEUxzpQjGKWSxT3tT8towEkzFtJyR-68O3XGDHI",
+          alt: "Gnome and Golem final clip thumbnail",
+          caption: "LinkedIn wrap-up clip showing the later jam build and level work.",
+          href: "https://www.linkedin.com/feed/update/urn:li:activity:7452015502865874945/",
+          linkLabel: "Watch final clip on LinkedIn"
         },
         {
           src: "https://img.itch.zone/aW1hZ2UvNDQ2Njc5OC8yNjcwMzQ4Mi5wbmc=/794x1000/d%2BZApR.png",
@@ -256,7 +287,7 @@ window.PORTFOLIO_CONTENT = {
       tags: ["Unity", "Puzzle", "Team Project"],
       links: [
         { label: "View Project", href: "https://marvinooo.itch.io/gnomegolem", icon: "arrow-up-right", style: "primary" },
-        { label: "Case Study", href: "project.html?project=gnome-golem", icon: "layers", style: "secondary", newTab: true }
+        { label: "Case Study", href: "project.html?project=gnome-golem", icon: "layers", style: "secondary" }
       ]
     }
   ],

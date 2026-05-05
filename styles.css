@@ -942,14 +942,31 @@ p {
   box-shadow: var(--shadow-soft);
 }
 
+.media-link {
+  display: block;
+}
+
 .media-card img {
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  transition: transform 180ms ease;
+}
+
+.media-link:hover img,
+.media-link:focus-visible img {
+  transform: scale(1.02);
 }
 
 .media-card figcaption {
-  padding: 0.95rem 1rem 1rem;
+  padding: 0.95rem 1rem 0.4rem;
   line-height: 1.6;
+}
+
+.media-caption-link {
+  display: inline-flex;
+  margin: 0 1rem 1rem;
+  color: var(--accent-strong);
+  font-weight: 800;
 }
 
 .detail-cta {

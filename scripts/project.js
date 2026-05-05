@@ -120,10 +120,17 @@
   function renderMedia(items) {
     const grid = byId("project-media-grid");
     grid.innerHTML = items.map(function (item) {
+      const imageMarkup = item.href
+        ? '<a class="media-link" href="' + escapeAttr(item.href) + '"' + linkAttrs(item.href, item.newTab !== false) + '><img src="' + escapeAttr(item.src || "") + '" alt="' + escapeAttr(item.alt || "Project media") + '" loading="lazy"></a>'
+        : '<img src="' + escapeAttr(item.src || "") + '" alt="' + escapeAttr(item.alt || "Project media") + '" loading="lazy">';
+      const linkMarkup = item.href && item.linkLabel
+        ? '<a class="media-caption-link" href="' + escapeAttr(item.href) + '"' + linkAttrs(item.href, item.newTab !== false) + ">" + escapeHtml(item.linkLabel) + "</a>"
+        : "";
       return [
         '<figure class="media-card reveal visible">',
-        '<img src="' + escapeAttr(item.src || "") + '" alt="' + escapeAttr(item.alt || "Project media") + '" loading="lazy">',
+        imageMarkup,
         item.caption ? '<figcaption>' + escapeHtml(item.caption) + "</figcaption>" : "",
+        linkMarkup,
         "</figure>"
       ].join("");
     }).join("");
