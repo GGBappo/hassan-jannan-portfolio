@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260505b">
+  <script defer src="content.js?v=20260505b"></script>
+  <script defer src="scripts/project.js?v=20260505b"></script>
+</head>
+<body>
+  <header class="navbar scrolled" id="project-nav">
+    <div class="container nav-inner">
+      <a href="index.html#hero" class="brand" id="project-brand" aria-label="Back to portfolio">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text" id="project-brand-name">Hassan Jannan</span>
+      </a>
+      <nav class="site-menu project-menu" aria-label="Project navigation">
+        <ul class="nav-links project-nav-links">
+          <li><a class="nav-link" href="index.html#projects">Projects</a></li>
+          <li><a class="nav-link button-link" id="project-live-link" href="index.html#projects">View Project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <section class="project-hero section">
+      <div class="container project-hero-layout">
+        <div class="project-hero-copy reveal visible">
+          <p class="section-kicker" id="project-category">Project</p>
+          <h1 class="project-page-title" id="project-title">Project Title</h1>
+          <p class="project-page-summary" id="project-summary"></p>
+          <div class="project-page-actions" id="project-page-actions"></div>
+        </div>
+
+        <aside class="project-page-facts reveal visible">
+          <div class="fact-card">
+            <p class="fact-label">Primary Focus</p>
+            <p class="fact-value" id="project-focus">Gameplay and systems</p>
+          </div>
+          <div class="fact-card">
+            <p class="fact-label">What I Worked On</p>
+            <p class="fact-value" id="project-role-summary">Project contributions</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container detail-layout">
+        <div class="detail-column">
+          <div class="section-intro reveal visible">
+            <p class="section-kicker">Overview</p>
+            <h2>How the project came together.</h2>
+          </div>
+          <div class="detail-copy" id="project-overview"></div>
+        </div>
+
+        <div class="detail-column detail-column-narrow">
+          <div class="detail-panel reveal visible">
+            <p class="detail-panel-kicker" id="project-details-heading">What I worked on</p>
+            <ul class="detail-list" id="project-details-list"></ul>
+          </div>
+          <div class="detail-panel reveal visible">
+            <p class="detail-panel-kicker">What I learned</p>
+            <ul class="detail-list" id="project-learnings-list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="project-gallery-section">
+      <div class="container">
+        <div class="section-intro reveal visible">
+          <p class="section-kicker">Gallery</p>
+          <h2>Screenshots, gifs, and showcase media.</h2>
+        </div>
+        <div class="media-grid" id="project-media-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="detail-cta reveal visible">
+          <h2>Back to the full portfolio.</h2>
+          <p>This page is part of your GitHub Pages portfolio, so you can keep adding more screenshots, GIFs, and takeaways as your projects grow.</p>
+          <a class="button primary" href="index.html#projects">Return to Projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

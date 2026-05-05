@@ -158,9 +158,10 @@
       const bullets = (item.bullets || []).map(function (point) {
         return "<li><span>" + escapeHtml(point) + "</span></li>";
       }).join("");
+      const itemClass = item.featured ? "timeline-item reveal featured" : "timeline-item reveal";
 
       return [
-        '<article class="timeline-item reveal">',
+        '<article class="' + itemClass + '">',
         '<div class="timeline-head">',
         "<div>",
         '<h3 class="timeline-role">' + escapeHtml(item.role || "") + "</h3>",
@@ -202,6 +203,7 @@
       const tags = (item.tags || []).map(function (tag) {
         return '<span class="tag">' + escapeHtml(tag) + "</span>";
       }).join("");
+      const cardClass = item.featured ? "project-card reveal featured" : "project-card reveal";
       const details = Array.isArray(item.details) ? item.details : [];
       const detailsMarkup = details.length
         ? [
@@ -220,9 +222,9 @@
       }).join("");
 
       return [
-        '<article class="project-card reveal">',
+        '<article class="' + cardClass + '">',
         '<div class="project-media">',
-        '<img src="' + escapeAttr(item.image || "assets/project-editorial.svg") + '" alt="' + escapeAttr(item.title || "Project preview") + '">',
+        '<img src="' + escapeAttr(item.image || "assets/project-editorial.svg") + '" alt="' + escapeAttr(item.title || "Project preview") + '" loading="lazy">',
         "</div>",
           '<div class="project-body">',
           '<p class="project-category">' + escapeHtml(item.category || "") + "</p>",
@@ -329,7 +331,7 @@
     const href = link.href || "#";
     const style = link.style === "secondary" ? "secondary" : "primary";
     return [
-      '<a class="' + classBase + " " + style + '" href="' + escapeAttr(href) + '"' + linkAttrs(href) + ">",
+      '<a class="' + classBase + " " + style + '" href="' + escapeAttr(href) + '"' + buttonAttrs(link) + ">",
       icon(link.icon || "arrow-up-right"),
       "<span>" + escapeHtml(link.label || "Open") + "</span>",
       "</a>"
@@ -394,6 +396,14 @@
     }
 
     return "";
+  }
+
+  function buttonAttrs(link) {
+    if (link && link.newTab) {
+      return ' target="_blank" rel="noreferrer"';
+    }
+
+    return linkAttrs(link && link.href ? link.href : "");
   }
 
   function rgbFromHex(hex) {
