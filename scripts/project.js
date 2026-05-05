@@ -118,8 +118,11 @@
   }
 
   function renderMedia(items) {
+    const visibleItems = items.filter(function (item) {
+      return !item.caseStudyHidden;
+    });
     const grid = byId("project-media-grid");
-    grid.innerHTML = items.map(function (item) {
+    grid.innerHTML = visibleItems.map(function (item) {
       const imageMarkup = item.href
         ? '<a class="media-link" href="' + escapeAttr(item.href) + '"' + linkAttrs(item.href, item.newTab !== false) + '><img src="' + escapeAttr(item.src || "") + '" alt="' + escapeAttr(item.alt || "Project media") + '" loading="lazy"></a>'
         : '<img src="' + escapeAttr(item.src || "") + '" alt="' + escapeAttr(item.alt || "Project media") + '" loading="lazy">';
@@ -135,7 +138,7 @@
       ].join("");
     }).join("");
 
-    byId("project-gallery-section").hidden = items.length === 0;
+    byId("project-gallery-section").hidden = visibleItems.length === 0;
   }
 
   function firstExternalProjectLink(links) {

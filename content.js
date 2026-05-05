@@ -193,7 +193,8 @@ window.PORTFOLIO_CONTENT = {
         {
           src: "assets/cepheus-cover.png",
           alt: "CEPHEUS cover art",
-          caption: "Official cover art used for the project's public page."
+          caption: "Official cover art used for the project's public page.",
+          caseStudyHidden: true
         },
         {
           src: "https://dms.licdn.com/playlist/vid/v2/D4E05AQGO54x4FIU66g/thumbnail-with-play-button-overlay-high/B4EZxx.jVSIsDU-/0/1771438752073?e=2147483647&v=beta&t=ORq5jqhMZRmngb5tjxi6m0LmwoRckpI77NncUXKdFXw",
@@ -256,7 +257,8 @@ window.PORTFOLIO_CONTENT = {
         {
           src: "assets/gnome-golem-cover.png",
           alt: "Gnome and Golem cover art",
-          caption: "Official cover art used for the project's public page."
+          caption: "Official cover art used for the project's public page.",
+          caseStudyHidden: true
         },
         {
           src: "https://dms.licdn.com/playlist/vid/v2/D4E05AQFpfMA92ygjpg/thumbnail-with-play-button-overlay-high/B4EZ1uTtoLG8DU-/0/1775672158498?e=2147483647&v=beta&t=QZ9cOIva89pHNDVejkJQNt_KZp_4wlnkIByR7lF5jys",
