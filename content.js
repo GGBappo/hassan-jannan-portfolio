@@ -291,6 +291,53 @@ window.PORTFOLIO_CONTENT = {
         { label: "View Project", href: "https://marvinooo.itch.io/gnomegolem", icon: "arrow-up-right", style: "primary" },
         { label: "Case Study", href: "project.html?project=gnome-golem", icon: "layers", style: "secondary" }
       ]
+    },
+    {
+      slug: "clare-is-calling",
+      featured: true,
+      category: "Psychological Horror / Game Jam",
+      title: "Clare is Calling",
+      description: "A psychological horror game about exploring a house, investigating what is real, and deciding who to trust while an AI character reacts to the player's choices.",
+      detailsHeading: "What I worked on",
+      details: [
+        "Built an inventory system with Unity UI and lists, including item sprites, descriptions, and facts shown when the player hovers over an item.",
+        "Used ScriptableObjects to create reusable item and interactable-item data that could be carried into the game's UI.",
+        "Implemented raycast-based pickup interactions so players could collect items and add them to their inventory.",
+        "Worked with NavMesh, path baking, and Animator controls to create an AI character that patrols randomly and uses a walking animation.",
+        "Created a suspicion system that raises an AI suspicion bar when the player picks up items nearby, then polished the inventory, AI pathing, and horror atmosphere."
+      ],
+      detailOverview: [
+        "Clare is Calling is a psychological horror project created for Brackeys Game Jam 2026.2. The game centers on exploring a house, examining what can be trusted, and responding to a tense relationship with the people around the player.",
+        "I focused on the systems that made investigation and player choice feel tangible: collecting items, reading their details, and having an AI character respond when the player takes items in view. I also helped create the mood through post-processing and AI movement polish."
+      ],
+      learnings: [
+        "ScriptableObjects are a strong fit for reusable item data because they keep inventory content separate from the systems that display and interact with it.",
+        "Raycasts and Unity UI can work together to create clear, responsive pickup and inspection interactions.",
+        "NavMesh pathing needs careful baking, testing, and Animator coordination to make AI movement feel believable.",
+        "Connecting player actions to a suspicion system can make simple exploration mechanics feel tense and meaningful.",
+        "Post-processing, UI polish, and bug fixing all make a real difference in how a horror game feels to play."
+      ],
+      media: [
+        {
+          src: "assets/clare-is-calling-cover.png",
+          alt: "Clare is Calling cover art",
+          caption: "Official cover art from the project's itch.io page.",
+          caseStudyHidden: true
+        },
+        {
+          src: "assets/clare-is-calling-banner.png",
+          alt: "Clare is Calling banner art",
+          caption: "Project artwork from the Clare is Calling itch.io page.",
+          href: "https://marvinooo.itch.io/cla",
+          linkLabel: "Play Clare is Calling on itch.io"
+        }
+      ],
+      image: "assets/clare-is-calling-cover.png",
+      tags: ["Unity", "C#", "Horror", "AI", "Game Jam"],
+      links: [
+        { label: "View Project", href: "https://marvinooo.itch.io/cla", icon: "arrow-up-right", style: "primary" },
+        { label: "Case Study", href: "project.html?project=clare-is-calling", icon: "layers", style: "secondary" }
+      ]
     }
   ],
   contact: {
