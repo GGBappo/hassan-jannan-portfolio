@@ -120,6 +120,20 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       featured: true,
+      role: "Contract Game Developer",
+      company: "Shabamin' Games LLC",
+      date: "Current",
+      summary: "Contributing to Project Wrath through Unity gameplay programming, UI systems, tutorials, playtesting, and production bug fixing within an established studio codebase.",
+      bullets: [
+        "Redesigned and implemented a functional results screen in Unity, adding missing tracked data and connecting it to the UI through Inspector configuration.",
+        "Built and refined dynamic tutorial systems that introduce prompts as players encounter new mechanics.",
+        "Prepared builds for playtesting by assembling scenes, testing features, identifying bugs, and helping polish the player experience.",
+        "Fixed issues across gameplay and health-related systems while implementing and refining new mechanics.",
+        "Worked with UI workflows, scrollable interfaces, events, listeners, and subscriptions in an existing production codebase."
+      ]
+    },
+    {
+      featured: true,
       role: "Game Development Head and Project Lead",
       company: "Digital Defenders Internship",
       date: "04/20/2025 - 08/12/2025",
