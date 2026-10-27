@@ -7,9 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260904b">
-  <script defer src="content.js?v=20260904b"></script>
-  <script defer src="scripts/project.js?v=20260904b"></script>
+  <link rel="stylesheet" href="styles.css?v=20261026a">
+  <script defer src="content.js?v=20261026a"></script>
+  <script defer src="scripts/project.js?v=20261026a"></script>
 </head>
 <body>
   <header class="navbar scrolled" id="project-nav">
@@ -37,15 +37,9 @@
           <div class="project-page-actions" id="project-page-actions"></div>
         </div>
 
-        <aside class="project-page-facts reveal visible">
-          <div class="fact-card">
-            <p class="fact-label">Primary Focus</p>
-            <p class="fact-value" id="project-focus">Gameplay and systems</p>
-          </div>
-          <div class="fact-card">
-            <p class="fact-label">What I Worked On</p>
-            <p class="fact-value" id="project-role-summary">Project contributions</p>
-          </div>
+        <aside class="project-page-facts reveal visible" aria-label="Project snapshot">
+          <p class="case-study-label">Project Snapshot</p>
+          <div class="project-fact-grid" id="project-fact-grid"></div>
         </aside>
       </div>
     </section>
@@ -55,20 +49,39 @@
         <div class="detail-column">
           <div class="section-intro reveal visible">
             <p class="section-kicker">Overview</p>
-            <h2>How the project came together.</h2>
+            <h2>What the project needed to solve.</h2>
           </div>
           <div class="detail-copy" id="project-overview"></div>
         </div>
 
         <div class="detail-column detail-column-narrow">
           <div class="detail-panel reveal visible">
-            <p class="detail-panel-kicker" id="project-details-heading">What I worked on</p>
-            <ul class="detail-list" id="project-details-list"></ul>
+            <p class="detail-panel-kicker">The Challenge</p>
+            <p class="detail-panel-copy" id="project-challenge"></p>
           </div>
           <div class="detail-panel reveal visible">
+            <p class="detail-panel-kicker">My Approach</p>
+            <p class="detail-panel-copy" id="project-approach"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="project-contributions-section">
+      <div class="container">
+        <div class="section-intro reveal visible">
+          <p class="section-kicker">Contribution</p>
+          <h2>The systems, decisions, and lessons behind the build.</h2>
+        </div>
+        <div class="case-study-work-grid">
+          <article class="detail-panel reveal visible">
+            <p class="detail-panel-kicker" id="project-details-heading">What I worked on</p>
+            <ul class="detail-list" id="project-details-list"></ul>
+          </article>
+          <article class="detail-panel reveal visible">
             <p class="detail-panel-kicker">What I learned</p>
             <ul class="detail-list" id="project-learnings-list"></ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>

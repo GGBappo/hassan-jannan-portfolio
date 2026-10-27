@@ -27,9 +27,10 @@
   setText("project-category", project.category, "Project");
   setText("project-title", project.title, "Project");
   setText("project-summary", project.description, "");
-  setText("project-focus", (project.tags || []).slice(0, 2).join(" / "), "Gameplay and systems");
-  setText("project-role-summary", summarizeRole(project.details || []), "Project contributions");
   setText("project-details-heading", project.detailsHeading || "What I worked on", "What I worked on");
+  renderProjectFacts(project);
+  setText("project-challenge", (project.caseStudy || {}).challenge, "Build a focused, playable experience while making the most of limited development time.");
+  setText("project-approach", (project.caseStudy || {}).approach, "Use clear, modular systems and iterative testing to support the project's player experience.");
 
   const liveLink = firstExternalProjectLink(project.links || []);
   const liveLinkNode = byId("project-live-link");
@@ -101,6 +102,25 @@
 
     buttons.push('<a class="button secondary" href="index.html#projects">Back to Portfolio</a>');
     actions.innerHTML = buttons.join("");
+  }
+
+  function renderProjectFacts(projectItem) {
+    const caseStudy = projectItem.caseStudy || {};
+    const facts = [
+      { label: "Role", value: caseStudy.role || summarizeRole(projectItem.details || []) },
+      { label: "Timeline", value: caseStudy.timeline || "Project development" },
+      { label: "Team", value: caseStudy.team || "Collaborative project" },
+      { label: "Tools", value: caseStudy.tools || (projectItem.tags || []).join(" / ") }
+    ];
+
+    byId("project-fact-grid").innerHTML = facts.map(function (fact) {
+      return [
+        '<div class="fact-card">',
+        '<p class="fact-label">' + escapeHtml(fact.label) + "</p>",
+        '<p class="fact-value">' + escapeHtml(fact.value) + "</p>",
+        "</div>"
+      ].join("");
+    }).join("");
   }
 
   function renderOverview(paragraphs) {

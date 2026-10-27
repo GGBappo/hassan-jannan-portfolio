@@ -20,7 +20,7 @@ window.PORTFOLIO_CONTENT = {
     },
     experience: {
       kicker: "Experience",
-      title: "Leadership, development, and internship experience."
+      title: "Game development leadership and hands-on production."
     },
     education: {
       kicker: "Education",
@@ -41,14 +41,14 @@ window.PORTFOLIO_CONTENT = {
   ],
   profile: {
     name: "Hassan Jannan",
-    role: "Computer Science Student, Unity Developer, and Project Lead",
+    role: "Founder, Unity Developer, and Project Lead",
     heroHeading: [
       "Building",
       "interactive",
       "game experiences."
     ],
     accentLine: 1,
-    summary: "I am a junior at the University of New Haven studying Computer Science with a concentration in Game Design and Development. As President of the Game Development and Design Club, I help lead student collaboration while building hands-on experience in Unity. Over the last year and a half, I have led three team-based game projects focused on gameplay systems, iteration, and player experience.",
+    summary: "I am a junior at the University of New Haven studying Computer Science with a concentration in Game Design and Development. I am the founder of Voyager Signal Games, where I lead a 10-member team building original game experiences in Unity. Over the last two years, I have led four collaborative projects focused on gameplay systems, iteration, and player experience.",
     contactLabel: "Want to connect?",
     contactCopy: "I am interested in internships, junior game development roles, and collaborative projects.",
     contactHref: "https://www.linkedin.com/in/hassan-jannan-7a652431b/",
@@ -79,10 +79,10 @@ window.PORTFOLIO_CONTENT = {
     ]
   },
   highlights: [
-    { label: "Primary Engine", value: "Unity" },
-    { label: "Leadership", value: "President, Game Development and Design Club" },
-    { label: "Experience", value: "1.5 years building games" },
-    { label: "Projects Led", value: "3 collaborative student projects" }
+    { label: "Studio", value: "Voyager Signal Games" },
+    { label: "Team Leadership", value: "Leading a 10-member development team" },
+    { label: "Experience", value: "2 years building games" },
+    { label: "Projects Led", value: "4 collaborative game projects" }
   ],
   expertise: [
     {
@@ -106,14 +106,16 @@ window.PORTFOLIO_CONTENT = {
   ],
   experience: [
     {
-      role: "President",
-      company: "Game Development and Design Club, University of New Haven",
-      date: "Current",
-      summary: "Leading the club community and helping create a stronger environment for collaboration, student projects, and shared learning in game development.",
+      featured: true,
+      role: "Founder & Game Developer",
+      company: "Voyager Signal Games",
+      date: "June 2026 - Present",
+      summary: "Founded and lead an independent game development studio focused on creating original, engaging game experiences.",
       bullets: [
-        "Support club activities centered on game development and design.",
-        "Encourage collaboration between students with different creative and technical strengths.",
-        "Help create a welcoming environment focused on learning, teamwork, and growth."
+        "Lead and coordinate a 10-member team, organize development tasks, support game design collaboration, and keep projects moving forward.",
+        "Develop gameplay systems and mechanics in Unity and C#, using object-oriented programming and debugging to build functional prototypes.",
+        "Guide project planning and creative direction, helping transform early concepts into playable experiences.",
+        "Contribute technical decisions, feature implementation, prototyping, and iterative testing across active projects."
       ]
     },
     {
@@ -128,17 +130,6 @@ window.PORTFOLIO_CONTENT = {
         "Tested and iterated on mechanics to keep the experience intuitive, educational, and engaging for children.",
         "Documented design decisions and aligned implementation with the project's learning goals across the team."
       ]
-    },
-    {
-      role: "Computer Science Student",
-      company: "University of New Haven",
-      date: "Current",
-      summary: "Studying Computer Science with a concentration in Game Design and Development while building practical experience in programming and game production.",
-      bullets: [
-        "Developing a foundation in software engineering and interactive systems.",
-        "Applying classroom knowledge directly to student and club-led game projects.",
-        "Continuing to strengthen Unity workflow, collaboration, and problem solving."
-      ]
     }
   ],
   education: [
@@ -150,11 +141,11 @@ window.PORTFOLIO_CONTENT = {
       description: "Concentration in Game Design and Development, with a focus on programming, systems thinking, and interactive digital experiences."
     },
     {
-      icon: "briefcase",
-      title: "Student Leadership and Project Work",
-      place: "University and club-based experience",
-      date: "Ongoing",
-      description: "Building practical experience by leading projects, collaborating with peers, and applying classroom knowledge to real game development work."
+      icon: "users",
+      title: "Resident Assistant",
+      place: "University of New Haven",
+      date: "Current",
+      description: "Supporting residents by building an inclusive community, planning programs, responding to concerns and incidents, helping uphold residential policies, and connecting students with campus resources."
     },
     {
       icon: "users",
@@ -170,6 +161,14 @@ window.PORTFOLIO_CONTENT = {
       featured: true,
       category: "Game Jam Project",
       title: "CEPHEUS",
+      caseStudy: {
+        role: "Narrative Systems & Gameplay Developer",
+        timeline: "One-week game jam",
+        team: "Six-person game jam team",
+        tools: "Unity, C#, ScriptableObjects",
+        challenge: "Create flexible dialogue and NPC interactions quickly enough to support a story-driven game while the team also built minigames and final polish.",
+        approach: "Separated dialogue data from gameplay logic with ScriptableObjects, used hitbox and input checks for reliable interaction, and assigned each NPC a dedicated dialogue manager."
+      },
       description: "A narrative-driven game jam project where I helped build dialogue, NPC interaction systems, and collaborative gameplay features for a surreal space story.",
       detailsHeading: "What I worked on",
       details: [
@@ -233,6 +232,14 @@ window.PORTFOLIO_CONTENT = {
       featured: true,
       category: "Puzzle Adventure",
       title: "Gnome & Golem",
+      caseStudy: {
+        role: "Gameplay Systems & Level Design",
+        timeline: "One-week game jam",
+        team: "Collaborative game jam team",
+        tools: "Unity, C#, Input System",
+        challenge: "Make two playable characters feel distinct while keeping their shared puzzle mechanics clear, responsive, and fun to use together.",
+        approach: "Built movement, character switching, checkpoints, and golem protection mechanics alongside level flow, then iterated on input handling and transition polish."
+      },
       description: "A two-character puzzle game where I built core gameplay, movement, switching, and level systems around the relationship between the gnome and the golem.",
       detailsHeading: "What I worked on",
       details: [
@@ -297,6 +304,14 @@ window.PORTFOLIO_CONTENT = {
       featured: true,
       category: "Psychological Horror / Game Jam",
       title: "Clare is Calling",
+      caseStudy: {
+        role: "Gameplay Systems, AI & UI Developer",
+        timeline: "Brackeys Game Jam 2026.2",
+        team: "Collaborative game jam team",
+        tools: "Unity, C#, NavMesh, ScriptableObjects",
+        challenge: "Turn investigation into a tense horror loop by connecting item collection, readable inventory information, and an AI character that reacts to the player's actions.",
+        approach: "Created reusable item data, raycast pickups, an inspection-focused inventory, NavMesh AI patrols, and a suspicion system, then used post-processing and polish to strengthen the mood."
+      },
       description: "A psychological horror game about exploring a house, investigating what is real, and deciding who to trust while an AI character reacts to the player's choices.",
       detailsHeading: "What I worked on",
       details: [
