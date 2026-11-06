@@ -115,6 +115,8 @@
       return '<span class="skill-pill">' + escapeHtml(item) + "</span>";
     }).join("");
 
+    byId("soft-skill-ribbon").innerHTML = (data.softSkills || []).map(function (item) { return '<span class="skill-pill">' + escapeHtml(item) + '</span>'; }).join('');
+
     byId("hero-actions").innerHTML = (data.actions || []).map(function (action) {
       return renderButton(action, "button");
     }).join("");
@@ -225,7 +227,7 @@
     }).join("");
 
     toggleSection("projects", items.length > 0);
-    byId("project-slider-controls").hidden = items.length <= 1;
+
   }
 
   function renderContact(data, name) {
@@ -288,7 +290,7 @@
       });
     });
 
-    initProjectSlider();
+
 
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver(function (entries) {
@@ -307,45 +309,6 @@
         node.classList.add("visible");
       });
     }
-  }
-
-  function initProjectSlider() {
-    const track = byId("project-grid");
-    const previous = byId("project-slider-prev");
-    const next = byId("project-slider-next");
-    const status = byId("project-slider-status");
-
-    if (!track || !previous || !next || !status || track.children.length <= 1) {
-      return;
-    }
-
-    const getStep = function () {
-      const firstCard = track.querySelector(".project-card");
-      const gap = parseFloat(window.getComputedStyle(track).gap) || 0;
-      return firstCard ? firstCard.getBoundingClientRect().width + gap : track.clientWidth;
-    };
-
-    const syncControls = function () {
-      const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
-      const position = Math.round(track.scrollLeft / Math.max(getStep(), 1)) + 1;
-      const total = track.children.length;
-
-      previous.disabled = track.scrollLeft <= 2;
-      next.disabled = track.scrollLeft >= maxScroll - 2;
-      status.textContent = Math.min(position, total) + " / " + total;
-    };
-
-    previous.addEventListener("click", function () {
-      track.scrollBy({ left: -getStep(), behavior: "smooth" });
-    });
-
-    next.addEventListener("click", function () {
-      track.scrollBy({ left: getStep(), behavior: "smooth" });
-    });
-
-    track.addEventListener("scroll", syncControls, { passive: true });
-    window.addEventListener("resize", syncControls);
-    syncControls();
   }
 
   function renderHeroTitle(lines, accentLine) {
