@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="How Hassan Jannan uses AI collaboration to iterate on his portfolio, communicate requirements, and review changes.">
+  <meta name="description" content="How Hassan Jannan uses ChatGPT, Claude, Gemini, and Unity MCP to learn, organize tasks, and automate development workflows.">
   <title>AI Workflow | Hassan Jannan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261106b">
-  <script defer src="scripts/ai-workflow.js?v=20261106b"></script>
+  <link rel="stylesheet" href="styles.css?v=20261106c">
+  <script defer src="scripts/ai-workflow.js?v=20261106c"></script>
 </head>
 <body>
   <header class="navbar scrolled">
@@ -26,25 +26,46 @@
       </ul></nav>
     </div>
   </header>
-  <main class="project-page">
+  <main class="project-page ai-workflow-page">
     <section class="section project-hero">
       <div class="container">
-        <div class="section-intro ai-intro"><p class="section-kicker">AI Workflow</p><h1 class="hero-title">Clear direction.<span class="accent-line">Reviewed results.</span></h1></div>
-        <p class="project-page-summary">This portfolio is one example of how I collaborate with AI: I give specific feedback, use it to help implement changes, and review the result through repeated iteration.</p>
+        <div class="section-intro ai-intro"><p class="section-kicker">AI Workflow</p><h1 class="hero-title">Learn the system.<span class="accent-line">Connect the tools.</span></h1></div>
+        <p class="project-page-summary">I use AI to fill gaps in my knowledge, understand unfamiliar code, and automate repeatable work. My approach is to give each tool a clear purpose and connect planning, implementation, and learning through a central orchestration layer.</p>
+        <div class="ai-principle"><p class="section-kicker">Learning comes first</p><p>When I do not understand something, I ask AI to teach me the concept and explain the code. I want to understand how a system works so I can keep building on it.</p></div>
       </div>
     </section>
-    <section class="section section-alt">
+    <section class="section section-alt" aria-labelledby="ai-tools-heading">
       <div class="container">
-        <div class="section-intro"><p class="section-kicker">In practice</p><h2>From visual feedback to a working page.</h2></div>
-        <div class="ai-layout">
-          <article class="detail-panel"><p class="detail-panel-kicker">01 / Define the change</p><h2>Start with specific feedback.</h2><p>I use screenshots and targeted comments to explain what needs to change, from card alignment and heading spacing to how buttons communicate that they are clickable.</p></article>
-          <article class="detail-panel"><p class="detail-panel-kicker">02 / Add context</p><h2>Keep the work grounded.</h2><p>I point AI toward the current website and GitHub repository, and provide corrections about my roles, dates, and project contributions so the portfolio reflects my actual experience.</p></article>
-          <article class="detail-panel"><p class="detail-panel-kicker">03 / Implement</p><h2>Turn requirements into changes.</h2><p>AI helps translate my feedback into changes to the site's HTML, CSS, and JavaScript, including project card layouts, navigation, accessible controls, and email links.</p></article>
-          <article class="detail-panel"><p class="detail-panel-kicker">04 / Review and refine</p><h2>Keep improving the result.</h2><p>I review the published site and give another round of feedback. That includes removing repeated content, clarifying skills for hiring, and correcting language that overstates what I did.</p></article>
+        <div class="section-intro"><p class="section-kicker">Tools I use</p><h2 id="ai-tools-heading">A purpose for each assistant.</h2></div>
+        <div class="ai-layout ai-tools">
+          <article class="detail-panel"><p class="detail-panel-kicker">Planning &amp; understanding</p><h3>ChatGPT</h3><p>I use ChatGPT for brainstorming, breaking requirements into smaller tasks, organizing workflows, and explaining code. It helps turn an early idea into a plan I can work through and learn from.</p><div class="tag-row"><span class="tag">Task Decomposition</span><span class="tag">Workflow Planning</span><span class="tag">Code Comprehension</span></div></article>
+          <article class="detail-panel"><p class="detail-panel-kicker">Coding &amp; deeper learning</p><h3>Claude</h3><p>I use Claude when a coding project takes me into unfamiliar territory. I ask for explanations of complex concepts and help with code, repository work, researching new concepts, and reviewing or rewriting material.</p><div class="tag-row"><span class="tag">Coding Assistance</span><span class="tag">Repository Work</span><span class="tag">Concept Learning</span></div></article>
+          <article class="detail-panel"><p class="detail-panel-kicker">Research &amp; everyday work</p><h3>Gemini</h3><p>I use Gemini for research and day-to-day tasks, choosing it when I need help gathering information or working through everyday questions.</p><div class="tag-row"><span class="tag">Research</span><span class="tag">Information Gathering</span></div></article>
+          <article class="detail-panel"><p class="detail-panel-kicker">Engine integration</p><h3>Unity MCP</h3><p>I use a Unity MCP integration to connect AI assistance with the Unity Editor. My workflow includes editor automation for scene manipulation, prefab generation, component configuration, and runtime debugging.</p><div class="tag-row"><span class="tag">Editor Automation</span><span class="tag">Prefabs &amp; Components</span><span class="tag">Debugging</span></div></article>
         </div>
       </div>
     </section>
-    <section class="section"><div class="container"><div class="detail-cta"><h2>See the work behind the portfolio.</h2><p>My game case studies describe the systems I built, the decisions behind them, and what I learned.</p><a class="button primary" href="index.html#projects">Explore Projects</a></div></div></section>
+    <section class="section" aria-labelledby="ai-flow-heading">
+      <div class="container">
+        <div class="section-intro"><p class="section-kicker">Project flow</p><h2 id="ai-flow-heading">From an idea to something I understand.</h2><p>This is the workflow I am building toward. Planning, coding assistance, and Unity integration support my current work; parallel agents and broader deployment automation are areas I am exploring.</p></div>
+        <ol class="ai-flow">
+          <li><div class="ai-step-number" aria-hidden="true">01</div><div><h3>Ideation &amp; architecture</h3><p>Use ChatGPT and Claude to shape the system blueprint, break down requirements, and identify tasks that are practical to implement and learn from.</p></div></li>
+          <li><div class="ai-step-number" aria-hidden="true">02</div><div><h3>Task generation &amp; orchestration <span class="ai-status">Exploring</span></h3><p>I am learning about Antigravity as a central hub for connecting plans, external systems, and assistants. I want to explore parallel execution threads for tasks that can be handled independently.</p></div></li>
+          <li><div class="ai-step-number" aria-hidden="true">03</div><div><h3>Implementation in code &amp; Unity</h3><p>Combine coding assistance with Unity MCP editor actions. I am also experimenting with open-source coding environments such as OpenCode to connect multiple AI tools in one process.</p></div></li>
+          <li><div class="ai-step-number" aria-hidden="true">04</div><div><h3>Learning &amp; applying</h3><p>Ask for explanations when a concept or implementation is unfamiliar, work through the code, and use what I learn to continue the project. The goal is to grow my understanding alongside the implementation.</p></div></li>
+          <li><div class="ai-step-number" aria-hidden="true">05</div><div><h3>Deployment &amp; next steps</h3><p>This portfolio deploys through GitHub Pages. The broader workflow I am interested in connects CI/CD with WebGL and mobile builds, with Stripe as a possible monetization integration.</p></div></li>
+        </ol>
+      </div>
+    </section>
+    <section class="section section-alt" aria-labelledby="ai-exploring-heading">
+      <div class="container"><div class="section-intro"><p class="section-kicker">Continuing to learn</p><h2 id="ai-exploring-heading">Connecting the workflow.</h2></div>
+        <div class="ai-layout">
+          <article class="detail-panel"><p class="detail-panel-kicker">Antigravity</p><h3>Orchestration &amp; parallel assistants</h3><p>I am exploring how an agent hub can coordinate tasks, connect external systems, and keep a project moving across different tools.</p></article>
+          <article class="detail-panel"><p class="detail-panel-kicker">Open-source coding environments</p><h3>Multiple tools, one process</h3><p>I am experimenting with ways to combine AI assistants in a shared coding workflow, including OpenCode, so each tool can contribute where it is useful.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section"><div class="container"><div class="detail-cta"><h2>Explore my development work.</h2><p>My game case studies describe my contributions, the systems I built, and the lessons I took from each project.</p><a class="button primary" href="index.html#projects">Explore Projects</a></div></div></section>
   </main>
 </body>
 </html>
