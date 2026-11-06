@@ -173,7 +173,7 @@ window.PORTFOLIO_CONTENT = {
     {
       slug: "cepheus",
       featured: true,
-      category: "Game Jam Project",
+      category: "Horror Story Game",
       title: "CEPHEUS",
       caseStudy: {
         role: "Narrative Systems & Gameplay Developer",
@@ -235,7 +235,7 @@ window.PORTFOLIO_CONTENT = {
         }
       ],
       image: "assets/cepheus-cover.png",
-      tags: ["Unity", "Game Jam", "Narrative"],
+      tags: ["Dialogue Systems", "C#", "Team Coordination", "Scope Planning"],
       links: [
         { label: "View Project", href: "https://itsupiki-okami.itch.io/cepheus", icon: "arrow-up-right", style: "primary" },
         { label: "Case Study", href: "project.html?project=cepheus", icon: "layers", style: "secondary" }
@@ -307,7 +307,7 @@ window.PORTFOLIO_CONTENT = {
         }
       ],
       image: "assets/gnome-golem-cover.png",
-      tags: ["Unity", "Puzzle", "Team Project"],
+      tags: ["Gameplay Programming", "Level Design", "Input Systems", "Collaboration"],
       links: [
         { label: "View Project", href: "https://marvinooo.itch.io/gnomegolem", icon: "arrow-up-right", style: "primary" },
         { label: "Case Study", href: "project.html?project=gnome-golem", icon: "layers", style: "secondary" }
@@ -316,7 +316,7 @@ window.PORTFOLIO_CONTENT = {
     {
       slug: "clare-is-calling",
       featured: true,
-      category: "Psychological Horror / Game Jam",
+      category: "Psychological Horror",
       title: "Clare is Calling",
       caseStudy: {
         role: "Gameplay Systems, AI & UI Developer",
@@ -362,7 +362,7 @@ window.PORTFOLIO_CONTENT = {
         }
       ],
       image: "assets/clare-is-calling-cover.png",
-      tags: ["Unity", "C#", "Horror", "AI", "Game Jam"],
+      tags: ["AI Programming", "UI Design", "Reusable Systems", "Iteration"],
       links: [
         { label: "View Project", href: "https://marvinooo.itch.io/cla", icon: "arrow-up-right", style: "primary" },
         { label: "Case Study", href: "project.html?project=clare-is-calling", icon: "layers", style: "secondary" }
@@ -375,9 +375,8 @@ window.PORTFOLIO_CONTENT = {
     location: "University of New Haven",
     socials: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/hassan-jannan-7a652431b/", icon: "linkedin" },
-      { label: "hassanjannan1234@gmail.com" }
+      { label: "hassanjannan1234@gmail.com", href: "mailto:hassanjannan1234@gmail.com" }
     ]
   },
   footerNote: ""
 };
-

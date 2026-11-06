@@ -204,22 +204,8 @@
         return '<span class="tag">' + escapeHtml(tag) + "</span>";
       }).join("");
       const cardClass = item.featured ? "project-card reveal featured" : "project-card reveal";
-      const details = Array.isArray(item.details) ? item.details : [];
-      const detailsMarkup = details.length
-        ? [
-            '<div class="project-details">',
-            '<p class="project-details-heading">' + escapeHtml(item.detailsHeading || "What I worked on") + "</p>",
-            '<ul class="project-details-list">',
-            details.map(function (point) {
-              return "<li>" + escapeHtml(point) + "</li>";
-            }).join(""),
-            "</ul>",
-            "</div>"
-          ].join("")
-        : "";
-      const links = (item.links || []).map(function (link) {
-        return renderButton(link, "button");
-      }).join("");
+      const caseLinks = (item.links || []).filter(function (link) { return /project\.html/i.test(link.href || ""); }).map(function (link) { return renderButton(Object.assign({}, link, { style: "secondary" }), "button"); }).join("");
+      const links = (item.links || []).filter(function (link) { return !/project\.html/i.test(link.href || ""); }).map(function (link) { return renderButton(link, "button"); }).join("");
 
       return [
         '<article class="' + cardClass + '">',
@@ -229,8 +215,8 @@
           '<div class="project-body">',
           '<p class="project-category">' + escapeHtml(item.category || "") + "</p>",
           '<h3 class="project-title">' + escapeHtml(item.title || "") + "</h3>",
+          '<div class="project-case-link">' + caseLinks + "</div>",
           '<p class="card-copy">' + escapeHtml(item.description || "") + "</p>",
-          detailsMarkup,
           '<div class="tag-row">' + tags + "</div>",
           '<div class="project-links">' + links + "</div>",
           "</div>",
