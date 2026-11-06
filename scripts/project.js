@@ -143,9 +143,7 @@
     });
     const grid = byId("project-media-grid");
     grid.innerHTML = visibleItems.map(function (item) {
-      const imageMarkup = item.href
-        ? '<a class="media-link" href="' + escapeAttr(item.href) + '"' + linkAttrs(item.href, item.newTab !== false) + '><img src="' + escapeAttr(item.src || "") + '" alt="' + escapeAttr(item.alt || "Project media") + '" loading="lazy"></a>'
-        : '<img src="' + escapeAttr(item.src || "") + '" alt="' + escapeAttr(item.alt || "Project media") + '" loading="lazy">';
+      const imageMarkup = '<button class="media-enlarge" type="button" data-media-index="' + visibleItems.indexOf(item) + '" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="' + escapeAttr('Enlarge ' + (item.alt || 'project media')) + '"><img src="' + escapeAttr(item.src || '') + '" alt="' + escapeAttr(item.alt || 'Project media') + '" loading="lazy"><span class="media-enlarge-label" aria-hidden="true">⤢ Enlarge</span></button>';
       const linkMarkup = item.href && item.linkLabel
         ? '<a class="media-caption-link" href="' + escapeAttr(item.href) + '"' + linkAttrs(item.href, item.newTab !== false) + ">" + escapeHtml(item.linkLabel) + "</a>"
         : "";
@@ -159,6 +157,49 @@
     }).join("");
 
     byId("project-gallery-section").hidden = visibleItems.length === 0;
+    initMediaViewer(visibleItems);
+  }
+
+  function initMediaViewer(items) {
+    const dialog = byId('media-viewer');
+    const image = byId('media-viewer-image');
+    const previous = byId('media-viewer-prev');
+    const next = byId('media-viewer-next');
+    let current = 0;
+    let trigger;
+    let oldOverflow;
+    function show(index) {
+      current = index;
+      const item = items[current];
+      image.src = item.fullSrc || item.src;
+      image.alt = item.alt || 'Project media';
+      byId('media-viewer-caption').textContent = item.caption || item.alt || '';
+      byId('media-viewer-status').textContent = (current + 1) + ' / ' + items.length;
+      previous.disabled = current === 0;
+      next.disabled = current === items.length - 1;
+    }
+    byId('project-media-grid').addEventListener('click', function (event) {
+      const button = event.target.closest('.media-enlarge');
+      if (!button) return;
+      trigger = button;
+      show(Number(button.dataset.mediaIndex));
+      oldOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      dialog.showModal();
+    });
+    previous.addEventListener('click', function () { if (current > 0) show(current - 1); });
+    next.addEventListener('click', function () { if (current < items.length - 1) show(current + 1); });
+    byId('media-viewer-close').addEventListener('click', function () { dialog.close(); });
+    dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowLeft' && current > 0) { event.preventDefault(); show(current - 1); }
+      if (event.key === 'ArrowRight' && current < items.length - 1) { event.preventDefault(); show(current + 1); }
+    });
+    dialog.addEventListener('close', function () {
+      document.body.style.overflow = oldOverflow || '';
+      image.removeAttribute('src');
+      if (trigger) trigger.focus();
+    });
   }
 
   function firstExternalProjectLink(links) {

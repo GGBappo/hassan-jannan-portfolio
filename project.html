@@ -7,9 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261106b">
-  <script defer src="content.js?v=20261106b"></script>
-  <script defer src="scripts/project.js?v=20261106b"></script>
+  <link rel="stylesheet" href="styles.css?v=20261106e">
+  <script defer src="content.js?v=20261106e"></script>
+  <script defer src="scripts/project.js?v=20261106e"></script>
 </head>
 <body>
   <header class="navbar scrolled" id="project-nav">
@@ -67,6 +67,17 @@
       </div>
     </section>
 
+    <section class="section" id="project-gallery-section">
+      <div class="container">
+        <div class="section-intro reveal visible">
+          <p class="section-kicker">Gallery</p>
+          <h2>See the game in action.</h2>
+        </div>
+        <p class="gallery-hint">Select any image or GIF to enlarge it.</p>
+        <div class="media-grid" id="project-media-grid"></div>
+      </div>
+    </section>
+
     <section class="section" id="project-contributions-section">
       <div class="container">
         <div class="section-intro reveal visible">
@@ -86,15 +97,7 @@
       </div>
     </section>
 
-    <section class="section" id="project-gallery-section">
-      <div class="container">
-        <div class="section-intro reveal visible">
-          <p class="section-kicker">Gallery</p>
-          <h2>Screenshots, gifs, and showcase media.</h2>
-        </div>
-        <div class="media-grid" id="project-media-grid"></div>
-      </div>
-    </section>
+
 
     <section class="section section-alt">
       <div class="container">
@@ -106,5 +109,13 @@
       </div>
     </section>
   </main>
+  <dialog class="media-viewer" id="media-viewer" aria-labelledby="media-viewer-title">
+    <div class="media-viewer-panel">
+      <div class="media-viewer-header"><h2 id="media-viewer-title">Project gallery</h2><button class="button secondary" id="media-viewer-close" type="button" autofocus>Close <span aria-hidden="true">×</span></button></div>
+      <img id="media-viewer-image" alt="">
+      <p id="media-viewer-caption"></p>
+      <div class="media-viewer-controls"><button class="button secondary" id="media-viewer-prev" type="button" aria-label="Previous image">← Previous</button><p id="media-viewer-status" aria-live="polite" aria-atomic="true"></p><button class="button secondary" id="media-viewer-next" type="button" aria-label="Next image">Next →</button></div>
+    </div>
+  </dialog>
 </body>
 </html>
