@@ -172,3 +172,26 @@ html.tab-inactive * { animation-play-state: paused !important; }
  .project-menu .nav-link { font-size: .72rem; padding: .4rem .45rem; }
  .project-body .project-title { font-size: 1.7rem; }
 }
+
+/* Supplied Persona artwork, kept separate from readable content surfaces. */
+.royal-ambient::after { content: ''; position: absolute; inset: -2%; background-image: linear-gradient(90deg,#08080c 0%,#08080ce8 30%,#08080c66 66%,#08080c33),url('assets/persona/joker-stars.png'); background-size: cover; background-position: 70% center; opacity: .5; animation: persona-art-drift 28s ease-in-out infinite alternate; }
+.persona-workflow .royal-ambient::after { background-image: linear-gradient(90deg,#08080c 0%,#08080cf0 28%,#08080c66 68%,#08080c33),url('assets/persona/take-your-time.jpg'); background-position: 70% center; opacity: .45; }
+@keyframes persona-art-drift { to { transform: translate3d(-1.5%,1%,0) scale(1.035); } }
+.hero-copy { isolation: isolate; }
+.hero-summary { background: #08080cba; padding: .4rem 0; }
+.tunnel-scene::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,#08080cbb,#08080c44,#08080cbb),url('assets/persona/take-your-time.jpg') center 55% / cover; opacity: .2; }
+.night-car { width: 190px; height: 112px; bottom: 9px; }
+.morgana-vehicle { display: block; position: relative; width: 100%; height: 100%; overflow: hidden; clip-path: polygon(1.607% 58.485%,2.679% 60.606%,6.964% 63.333%,12.500% 65.152%,14.107% 32.121%,14.286% 9.394%,18.393% 7.273%,19.821% 1.818%,21.071% 7.273%,65.179% 9.394%,70.714% 10.000%,73.036% 2.121%,72.143% 11.212%,80.714% 14.242%,83.929% 18.485%,85.536% 25.455%,86.964% 39.091%,93.036% 45.455%,95.536% 53.636%,96.071% 73.939%,97.679% 77.879%,98.214% 82.424%,94.821% 84.545%,83.214% 84.545%,82.143% 89.091%,79.464% 92.727%,75.714% 93.939%,72.321% 91.515%,70.000% 87.273%,69.107% 83.939%,33.571% 84.545%,32.500% 89.394%,30.000% 93.939%,26.429% 96.364%,22.679% 95.152%,19.464% 91.515%,17.679% 85.758%,17.500% 81.515%,11.429% 80.909%,10.357% 78.788%,12.143% 76.061%,12.679% 66.667%,6.786% 63.939%,3.214% 61.515%); animation: car-idle .8s ease-in-out infinite alternate; }
+.night-car .morgana-vehicle img { position: absolute; width: 228.571429%; max-width: none; height: auto; left: -62.5%; top: -62.121212%; object-fit: initial; animation: none; scale: none; }
+.night-car.facing-left .morgana-vehicle { scale: -1 1; }
+.night-car.facing-left .morgana-vehicle img { scale: none; }
+.night-car:hover img { filter: none; }
+.night-car:hover .morgana-vehicle { filter: brightness(1.2); }
+.mask-follower { width: 46px; height: 28px; filter: drop-shadow(1px 2px 1px #000) drop-shadow(0 0 2px #ef183d); }
+.brand-mark.hj-emblem { width: 46px; height: 31px; }
+@media (max-width: 680px) {
+ .royal-ambient::after { background-position: 64% center; opacity: .32; }
+ .persona-workflow .royal-ambient::after { opacity: .3; }
+ .night-car { width: 150px; height: 88px; }
+ #project-nav .hj-emblem { width: 32px; }
+}

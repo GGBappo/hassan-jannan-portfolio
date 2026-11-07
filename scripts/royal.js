@@ -12,9 +12,10 @@
   background.className = 'royal-ambient'; background.setAttribute('aria-hidden', 'true');
   background.innerHTML = '<i class="ambient-cut cut-one"></i><i class="ambient-cut cut-two"></i><i class="ambient-dots"></i>';
   document.body.prepend(background);
+  if (location.pathname.includes("ai-workflow")) document.body.classList.add("persona-workflow");
   document.querySelectorAll('.brand-mark').forEach(function (mark) {
     mark.classList.add('hj-emblem');
-    mark.style.backgroundImage = 'url("assets/hj-mask.svg")';
+    mark.style.backgroundImage = 'url("assets/persona/joker-mask.webp")';
   });
   const toggle = document.createElement('button');
   toggle.type = 'button'; toggle.className = 'motion-toggle';
@@ -24,7 +25,7 @@
   const footer = document.createElement('footer');
   footer.className = 'night-route';
   footer.setAttribute('aria-label', 'Hassan Jannan night route');
-  footer.innerHTML = '<div class="route-caption"><span>THE NEXT STOP</span><strong>Keep learning. Keep building.</strong><span class="route-signature">HJ / AFTER HOURS</span></div><div class="tunnel-scene"><div class="tunnel-ribs" aria-hidden="true"></div><div class="tunnel-haze" aria-hidden="true"></div><div class="tunnel-tracks" aria-hidden="true"></div><button class="night-car" type="button" aria-label="Discover a message from Hassan"><img src="assets/night-runner.svg" alt=""><span class="car-shadow" aria-hidden="true"></span></button></div><p class="car-message" role="status" hidden>A little curiosity goes a long way. Thanks for exploring my work. — Hassan</p><div class="route-bottom"><a href="index.html#hero">↑ Back to the top</a><span>Hassan Jannan / Game Developer</span><span>Persona 5 Royal inspired · Original portfolio artwork</span></div>';
+  footer.innerHTML = '<div class="route-caption"><span>THE NEXT STOP</span><strong>Keep learning. Keep building.</strong><span class="route-signature">HJ / AFTER HOURS</span></div><div class="tunnel-scene"><div class="tunnel-ribs" aria-hidden="true"></div><div class="tunnel-haze" aria-hidden="true"></div><div class="tunnel-tracks" aria-hidden="true"></div><button class="night-car" type="button" aria-label="Discover a message from Hassan"><span class="morgana-vehicle" aria-hidden="true"><img src="assets/persona/morgana-scene.jpg" alt=""></span></button></div><p class="car-message" role="status" hidden>A little curiosity goes a long way. Thanks for exploring my work. — Hassan</p><div class="route-bottom"><a href="index.html#hero">↑ Back to the top</a><span>Hassan Jannan / Game Developer</span><span>Persona 5 Royal artwork · © ATLUS / SEGA</span></div>';
   document.body.append(footer);
   const car = footer.querySelector('.night-car');
   const scene = footer.querySelector('.tunnel-scene');
@@ -56,7 +57,7 @@
 
   const cursor = document.createElement('div');
   cursor.className = 'mask-follower'; cursor.setAttribute('aria-hidden','true');
-  cursor.innerHTML = '<img src="assets/hj-mask.svg" alt="">';
+  cursor.innerHTML = '<img src="assets/persona/joker-mask.webp" alt="">';
   document.body.append(cursor);
   let x = 0, y = 0, tx = 0, ty = 0, cursorTimer;
   const finePointer = window.matchMedia('(pointer: fine)');
