@@ -47,6 +47,8 @@
     position = destination;
     animation.onfinish = function () { animation = null; travelTimer = setTimeout(drive, 1200 + Math.random() * 2800); };
   }
+  car.addEventListener('pointerenter', stopCar);
+  car.addEventListener('pointerleave', drive);
   new IntersectionObserver(function (entries) {
     footerVisible = entries[0].isIntersecting;
     if (footerVisible) drive(); else stopCar();

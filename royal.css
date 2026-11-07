@@ -23,6 +23,7 @@ body::before { opacity: .08; background-size: 28px 28px; animation: none; }
 .menu-toggle span { background: #08080c; }
 a:focus-visible, button:focus-visible { outline: 3px solid #f4c95d; outline-offset: 5px; box-shadow: 0 0 0 2px #08080c; }
 h1,h2,h3,.brand,.project-title,.timeline-role,.button,.route-caption strong { font-family: 'Barlow Condensed','Space Grotesk',sans-serif; }
+.hero-title,.project-page-title,.card-title { font-family: 'Barlow Condensed','Space Grotesk',sans-serif; }
 .hero { padding-top: 9rem; overflow: hidden; }
 .hero-wash { display: none; }
 .hero-heading-row { grid-template-columns: minmax(0,1fr) 280px; gap: 4rem; }
