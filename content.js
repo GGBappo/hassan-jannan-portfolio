@@ -76,7 +76,6 @@ window.PORTFOLIO_CONTENT = {
       "game experiences."
     ],
     "accentLine": 1,
-    "summary": "I am a junior at the University of New Haven studying Computer Science with a concentration in Game Design and Development. I am the founder of Voyager Signal Games, where I lead a 10-member team building original game experiences in Unity. Over the last two years, I have led four collaborative projects focused on gameplay systems, iteration, and player experience.",
     "contactLabel": "Want to connect?",
     "contactCopy": "I am interested in internships, junior game development roles, and collaborative projects.",
     "contactHref": "https://www.linkedin.com/in/hassan-jannan-7a652431b/",

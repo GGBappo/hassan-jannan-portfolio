@@ -189,9 +189,19 @@ html.tab-inactive * { animation-play-state: paused !important; }
 .night-car:hover .morgana-vehicle { filter: brightness(1.2); }
 .mask-follower { width: 46px; height: 28px; filter: drop-shadow(1px 2px 1px #000) drop-shadow(0 0 2px #ef183d); }
 .brand-mark.hj-emblem { width: 46px; height: 31px; }
+#hero { padding-top: clamp(7rem, 11vh, 9rem); padding-bottom: 3.8rem; }
+#hero .hero-heading-row { display: block; margin: .55rem 0 0; max-width: 49rem; }
+#hero .hero-title { font-size: clamp(3rem, 5.3vw, 5.5rem); line-height: 1.02; }
+#hero .hero-actions { margin-top: 1.85rem; }
+#hero .hero-lower { margin-top: 2.25rem; }
+.about-sidebar { display: grid; gap: 1.7rem; min-width: 0; }
+.about-sidebar .contact-bubble { position: static; width: calc(100% - 8px); max-width: none; margin: 0; transform: rotate(1deg); }
 @media (max-width: 680px) {
  .royal-ambient::after { background-position: 64% center; opacity: .32; }
  .persona-workflow .royal-ambient::after { opacity: .3; }
  .night-car { width: 150px; height: 88px; }
  #project-nav .hj-emblem { width: 32px; }
+ #hero .hero-title { font-size: clamp(2.65rem, 10vw, 4.4rem); }
+ #hero { padding-bottom: 2.75rem; }
+ .about-sidebar .contact-bubble { transform: none; }
 }

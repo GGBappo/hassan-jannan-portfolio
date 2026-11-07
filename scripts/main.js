@@ -94,7 +94,6 @@
   function renderHero(data) {
     setText("hero-role", data.role, "");
     byId("hero-title").innerHTML = renderHeroTitle(data.heroHeading || [], Number.isInteger(data.accentLine) ? data.accentLine : -1);
-    setText("hero-summary", data.summary, "");
     setText("contact-bubble-label", data.contactLabel, "Get in touch");
     setText("contact-bubble-copy", data.contactCopy, "");
 
