@@ -1,14 +1,14 @@
 window.PORTFOLIO_CONTENT = {
   "siteTitle": "Hassan Jannan | Portfolio",
   "theme": {
-    "accent": "#c51622",
-    "accentStrong": "#ff5f6d",
-    "warmAccent": "#ffffff",
-    "bg": "#050505",
-    "bgAlt": "#101010",
-    "panel": "#151515",
-    "text": "#f5f5f5",
-    "muted": "#c9c9c9",
+    "accent": "#ef183d",
+    "accentStrong": "#ff718b",
+    "warmAccent": "#f4c95d",
+    "bg": "#08080c",
+    "bgAlt": "#131116",
+    "panel": "#17151b",
+    "text": "#faf8ef",
+    "muted": "#d0cbd5",
     "border": "rgba(255, 255, 255, 0.12)"
   },
   "sectionHeaders": {
@@ -20,7 +20,7 @@ window.PORTFOLIO_CONTENT = {
     },
     "expertise": {
       "kicker": "Strengths",
-      "title": "Gameplay systems, UI, and teamwork."
+      "title": "Systems. Curiosity. Collaboration."
     },
     "experience": {
       "kicker": "Experience",
@@ -32,7 +32,7 @@ window.PORTFOLIO_CONTENT = {
     },
     "projects": {
       "kicker": "Projects",
-      "title": "Selected game projects."
+      "title": "The project dossiers."
     },
     "contact": {
       "kicker": "Connect"
@@ -42,6 +42,10 @@ window.PORTFOLIO_CONTENT = {
     {
       "label": "Home",
       "href": "#hero"
+    },
+    {
+      "label": "About",
+      "href": "#about"
     },
     {
       "label": "Experience",

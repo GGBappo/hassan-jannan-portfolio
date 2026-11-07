@@ -19,7 +19,7 @@
     const galleryNext = document.getElementById('gallery-next');
     const pause = document.getElementById('gallery-pause');
     let current = 0, active = 0, trigger, oldOverflow, inView = false, frame;
-    let paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let paused = window.PortfolioMotion ? window.PortfolioMotion.reduced : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.getElementById('project-gallery-section').hidden = media.length === 0;
     const previews = [];
     media.forEach(function (item, index) {
@@ -107,6 +107,7 @@
     function syncPause() { pause.textContent = paused ? 'Play previews' : 'Pause previews'; }
     pause.hidden = !media.some(isVideo);
     syncPause();
+    window.addEventListener("portfolio-motion-change", function (event) { paused = event.detail.reduced; syncPause(); syncPlayback(); });
     pause.addEventListener('click', function () { paused = !paused; syncPause(); syncPlayback(); });
     new IntersectionObserver(function (entries) { inView = entries[0].isIntersecting; syncPlayback(); }, {threshold:.2}).observe(grid);
     window.addEventListener('resize', syncScroll);
