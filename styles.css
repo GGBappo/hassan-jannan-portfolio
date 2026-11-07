@@ -1517,3 +1517,10 @@ a:active, button:active:not(:disabled) { transform: translateY(1px); }
  .media-viewer-controls { flex-wrap: wrap; }
  #media-viewer-status { font-size: .85rem; }
 }
+
+[hidden] { display: none !important; }
+.case-study-pending .detail-layout { grid-template-columns: 1fr; }
+.case-study-pending .project-hero-layout { grid-template-columns: 1fr; }
+.project-grid { grid-auto-rows: 1fr; }
+.case-study-pending .detail-copy { max-width: 75ch; }
+.project-status { display: flex; align-items: center; min-height: 48px; font-size: .85rem; color: var(--muted); }

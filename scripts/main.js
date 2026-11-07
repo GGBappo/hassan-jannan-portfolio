@@ -220,7 +220,7 @@
           '<div class="project-case-link">' + caseLinks + "</div>",
           '<p class="card-copy">' + escapeHtml(item.description || "") + "</p>",
           '<div class="tag-row">' + tags + "</div>",
-          '<div class="project-links">' + links + "</div>",
+          '<div class="project-links">' + (item.caseStudyPending ? '<p class="project-status">Case study coming soon</p>' : links) + "</div>",
           "</div>",
           "</article>"
         ].join("");

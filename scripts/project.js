@@ -28,7 +28,15 @@
   setText("project-title", project.title, "Project");
   setText("project-summary", project.description, "");
   setText("project-details-heading", project.detailsHeading || "What I worked on", "What I worked on");
-  renderProjectFacts(project);
+  const pending = Boolean(project.caseStudyPending);
+  document.body.classList.toggle("case-study-pending", pending);
+  if (pending) {
+    document.querySelector(".project-page-facts").hidden = true;
+    document.querySelector(".detail-column-narrow").hidden = true;
+    byId("project-contributions-section").hidden = true;
+  } else {
+    renderProjectFacts(project);
+  }
   setText("project-challenge", (project.caseStudy || {}).challenge, "Build a focused, playable experience while making the most of limited development time.");
   setText("project-approach", (project.caseStudy || {}).approach, "Use clear, modular systems and iterative testing to support the project's player experience.");
 

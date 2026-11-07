@@ -268,18 +268,14 @@ window.PORTFOLIO_CONTENT = {
           "caseStudyHidden": true
         },
         {
-          "src": "https://dms.licdn.com/playlist/vid/v2/D4E05AQGO54x4FIU66g/thumbnail-with-play-button-overlay-high/B4EZxx.jVSIsDU-/0/1771438752073?e=2147483647&v=beta&t=ORq5jqhMZRmngb5tjxi6m0LmwoRckpI77NncUXKdFXw",
-          "alt": "CEPHEUS LinkedIn development clip thumbnail",
-          "caption": "LinkedIn progress update showing the dialogue and NPC interaction work in progress.",
-          "href": "https://www.linkedin.com/feed/update/urn:li:activity:7429952672713048064/",
-          "linkLabel": "Open LinkedIn clip"
+          "src": "assets/gifs/Cepheus1.gif",
+          "alt": "CEPHEUS development GIF 1",
+          "caption": "CEPHEUS — development footage 1."
         },
         {
-          "src": "https://dms.licdn.com/playlist/vid/v2/D4E05AQHbFftVcJwuBQ/thumbnail-with-play-button-overlay-high/B4EZyMiONtHMDU-/0/1771884309766?e=2147483647&v=beta&t=HV-lGT3rnEQM3snchy8LhNjl2r8R6vV1TafO4_tME3E",
-          "alt": "CEPHEUS final LinkedIn clip thumbnail",
-          "caption": "LinkedIn wrap-up post with a clip from the final jam build.",
-          "href": "https://www.linkedin.com/feed/update/urn:li:activity:7431821485213782016/",
-          "linkLabel": "Watch final clip on LinkedIn"
+          "src": "assets/gifs/Cepheus2.gif",
+          "alt": "CEPHEUS development GIF 2",
+          "caption": "CEPHEUS — development footage 2."
         },
         {
           "src": "https://img.itch.zone/aW1hZ2UvNDMxMzA4MS8yNTczNTYyNy5wbmc=/794x1000/wIUx96.png",
@@ -355,18 +351,14 @@ window.PORTFOLIO_CONTENT = {
           "caseStudyHidden": true
         },
         {
-          "src": "https://dms.licdn.com/playlist/vid/v2/D4E05AQFpfMA92ygjpg/thumbnail-with-play-button-overlay-high/B4EZ1uTtoLG8DU-/0/1775672158498?e=2147483647&v=beta&t=QZ9cOIva89pHNDVejkJQNt_KZp_4wlnkIByR7lF5jys",
-          "alt": "Gnome and Golem progress clip thumbnail",
-          "caption": "LinkedIn development update focused on the core mechanics and puzzle setup.",
-          "href": "https://www.linkedin.com/feed/update/urn:li:activity:7447708868794544128/",
-          "linkLabel": "Open development clip"
+          "src": "assets/gifs/GnomeAndGolem1.gif",
+          "alt": "Gnome & Golem development GIF 1",
+          "caption": "Gnome & Golem — development footage 1."
         },
         {
-          "src": "https://dms.licdn.com/playlist/vid/v2/D4E05AQHGYJN95FV6fA/thumbnail-with-play-button-overlay-high/B4EZ2rgjnuHUDU-/0/1776698938157?e=2147483647&v=beta&t=kjXIkEUxzpQjGKWSxT3tT8towEkzFtJyR-68O3XGDHI",
-          "alt": "Gnome and Golem final clip thumbnail",
-          "caption": "LinkedIn wrap-up clip showing the later jam build and level work.",
-          "href": "https://www.linkedin.com/feed/update/urn:li:activity:7452015502865874945/",
-          "linkLabel": "Watch final clip on LinkedIn"
+          "src": "assets/gifs/GnomeAndGolem2.gif",
+          "alt": "Gnome & Golem development GIF 2",
+          "caption": "Gnome & Golem — development footage 2."
         },
         {
           "src": "https://img.itch.zone/aW1hZ2UvNDQ2Njc5OC8yNjcwMzQ4Mi5wbmc=/794x1000/d%2BZApR.png",
@@ -436,6 +428,16 @@ window.PORTFOLIO_CONTENT = {
       ],
       "media": [
         {
+          "src": "assets/gifs/ClaireIsCalling1.gif",
+          "alt": "Clare is Calling development GIF 1",
+          "caption": "Clare is Calling — development footage 1."
+        },
+        {
+          "src": "assets/gifs/ClaireIsCalling2.gif",
+          "alt": "Clare is Calling development GIF 2",
+          "caption": "Clare is Calling — development footage 2."
+        },
+        {
           "src": "assets/clare-is-calling-cover.png",
           "alt": "Clare is Calling cover art",
           "caption": "Official cover art from the project's itch.io page.",
@@ -466,6 +468,90 @@ window.PORTFOLIO_CONTENT = {
         {
           "label": "Case Study",
           "href": "project.html?project=clare-is-calling",
+          "icon": "layers",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "slug": "improvised",
+      "title": "Improvised",
+      "category": "Game Project",
+      "caseStudyPending": true,
+      "description": "Development footage from Improvised. A detailed case study will be added next.",
+      "detailOverview": [
+        "Explore the development footage below. A detailed case study with my contributions and takeaways is coming soon."
+      ],
+      "image": "assets/gifs/Improvised1.gif",
+      "tags": [],
+      "media": [
+        {
+          "src": "assets/gifs/Improvised1.gif",
+          "alt": "Improvised development GIF 1",
+          "caption": "Improvised — development footage 1."
+        },
+        {
+          "src": "assets/gifs/Improvised2.gif",
+          "alt": "Improvised development GIF 2",
+          "caption": "Improvised — development footage 2."
+        },
+        {
+          "src": "assets/gifs/Improvised3.gif",
+          "alt": "Improvised development GIF 3",
+          "caption": "Improvised — development footage 3."
+        }
+      ],
+      "links": [
+        {
+          "label": "View Gallery",
+          "href": "project.html?project=improvised",
+          "icon": "layers",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "slug": "digital-defenders",
+      "title": "Digital Defenders",
+      "category": "Game Project",
+      "caseStudyPending": true,
+      "description": "An educational cybersecurity game developed during my Digital Defenders internship.",
+      "detailOverview": [
+        "Explore the development footage below. A detailed case study with my contributions and takeaways is coming soon."
+      ],
+      "image": "assets/gifs/DigitalDefenders1.gif",
+      "tags": [],
+      "media": [
+        {
+          "src": "assets/gifs/DigitalDefenders1.gif",
+          "alt": "Digital Defenders development GIF 1",
+          "caption": "Digital Defenders — development footage 1."
+        },
+        {
+          "src": "assets/gifs/DigitalDefenders2.gif",
+          "alt": "Digital Defenders development GIF 2",
+          "caption": "Digital Defenders — development footage 2."
+        },
+        {
+          "src": "assets/gifs/DigitalDefenders3.gif",
+          "alt": "Digital Defenders development GIF 3",
+          "caption": "Digital Defenders — development footage 3."
+        },
+        {
+          "src": "assets/gifs/DigitalDefenders4.gif",
+          "alt": "Digital Defenders development GIF 4",
+          "caption": "Digital Defenders — development footage 4."
+        },
+        {
+          "src": "assets/gifs/DigitalDefenders5.gif",
+          "alt": "Digital Defenders development GIF 5",
+          "caption": "Digital Defenders — development footage 5."
+        }
+      ],
+      "links": [
+        {
+          "label": "View Gallery",
+          "href": "project.html?project=digital-defenders",
           "icon": "layers",
           "style": "secondary"
         }
