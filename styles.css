@@ -1524,3 +1524,30 @@ a:active, button:active:not(:disabled) { transform: translateY(1px); }
 .project-grid { grid-auto-rows: 1fr; }
 .case-study-pending .detail-copy { max-width: 75ch; }
 .project-status { display: flex; align-items: center; min-height: 48px; font-size: .85rem; color: var(--muted); }
+
+/* Compact, horizontally scrolling case study media. */
+.project-page:not(.ai-workflow-page) .section { padding: 3rem 0; }
+.project-page:not(.ai-workflow-page) .project-hero { padding-top: 2.5rem; }
+.project-page:not(.ai-workflow-page) .section-intro { margin-bottom: 1.5rem; }
+.gallery-hint { margin: 0 0 1rem; }
+.gallery-controls { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; margin-bottom: 1rem; }
+.gallery-controls .button { min-height: 44px; padding: .55rem .85rem; }
+.gallery-controls .button:disabled { opacity: .4; cursor: default; transform: none; box-shadow: none; }
+#gallery-status { min-width: 3rem; text-align: center; }
+#gallery-pause { margin-left: auto; }
+.media-scroller { display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(280px, 72%); gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: .25rem .25rem 1rem; scrollbar-width: auto; scrollbar-color: #f17189 #292329; }
+.media-scroller::-webkit-scrollbar { height: 12px; }
+.media-scroller::-webkit-scrollbar-track { background: #292329; border-radius: 8px; }
+.media-scroller::-webkit-scrollbar-thumb { background: #f17189; border-radius: 8px; border: 2px solid #292329; }
+.media-scroller .media-card { scroll-snap-align: start; min-width: 0; }
+.media-enlarge video, .media-enlarge img { display: block; width: 100%; height: clamp(190px, 24vw, 300px); aspect-ratio: auto; object-fit: contain; background: #050505; pointer-events: none; }
+#media-viewer-stage { position: relative; min-height: 200px; background: #050505; display: grid; place-items: center; }
+#media-viewer-stage img, #media-viewer-stage video { display: block; width: 100%; height: min(65dvh,740px); object-fit: contain; }
+#media-viewer-stage[data-state="loading"]::after { content: 'Loading media…'; position: absolute; padding: .6rem 1rem; border-radius: 6px; color: #fff; background: #21151fee; pointer-events: none; }
+#media-viewer-stage[data-state="error"] p { padding: 2rem; text-align: center; }
+@media (max-width: 680px) {
+ .media-scroller { grid-auto-columns: 88%; }
+ .gallery-controls .button { width: auto; font-size: .8rem; }
+ #gallery-pause { margin-left: 0; }
+ .project-page:not(.ai-workflow-page) .section { padding: 2rem 0; }
+}

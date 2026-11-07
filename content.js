@@ -268,14 +268,18 @@ window.PORTFOLIO_CONTENT = {
           "caseStudyHidden": true
         },
         {
-          "src": "assets/gifs/Cepheus1.gif",
-          "alt": "CEPHEUS development GIF 1",
-          "caption": "CEPHEUS — development footage 1."
+          "src": "assets/clips/Cepheus1.mp4",
+          "alt": "CEPHEUS development clip 1",
+          "caption": "CEPHEUS — development footage 1.",
+          "poster": "assets/clips/Cepheus1.jpg",
+          "type": "video"
         },
         {
-          "src": "assets/gifs/Cepheus2.gif",
-          "alt": "CEPHEUS development GIF 2",
-          "caption": "CEPHEUS — development footage 2."
+          "src": "assets/clips/Cepheus2.mp4",
+          "alt": "CEPHEUS development clip 2",
+          "caption": "CEPHEUS — development footage 2.",
+          "poster": "assets/clips/Cepheus2.jpg",
+          "type": "video"
         },
         {
           "src": "https://img.itch.zone/aW1hZ2UvNDMxMzA4MS8yNTczNTYyNy5wbmc=/794x1000/wIUx96.png",
@@ -351,14 +355,18 @@ window.PORTFOLIO_CONTENT = {
           "caseStudyHidden": true
         },
         {
-          "src": "assets/gifs/GnomeAndGolem1.gif",
-          "alt": "Gnome & Golem development GIF 1",
-          "caption": "Gnome & Golem — development footage 1."
+          "src": "assets/clips/GnomeAndGolem1.mp4",
+          "alt": "Gnome & Golem development clip 1",
+          "caption": "Gnome & Golem — development footage 1.",
+          "poster": "assets/clips/GnomeAndGolem1.jpg",
+          "type": "video"
         },
         {
-          "src": "assets/gifs/GnomeAndGolem2.gif",
-          "alt": "Gnome & Golem development GIF 2",
-          "caption": "Gnome & Golem — development footage 2."
+          "src": "assets/clips/GnomeAndGolem2.mp4",
+          "alt": "Gnome & Golem development clip 2",
+          "caption": "Gnome & Golem — development footage 2.",
+          "poster": "assets/clips/GnomeAndGolem2.jpg",
+          "type": "video"
         },
         {
           "src": "https://img.itch.zone/aW1hZ2UvNDQ2Njc5OC8yNjcwMzQ4Mi5wbmc=/794x1000/d%2BZApR.png",
@@ -428,14 +436,18 @@ window.PORTFOLIO_CONTENT = {
       ],
       "media": [
         {
-          "src": "assets/gifs/ClaireIsCalling1.gif",
-          "alt": "Clare is Calling development GIF 1",
-          "caption": "Clare is Calling — development footage 1."
+          "src": "assets/clips/ClaireIsCalling1.mp4",
+          "alt": "Clare is Calling development clip 1",
+          "caption": "Clare is Calling — development footage 1.",
+          "poster": "assets/clips/ClaireIsCalling1.jpg",
+          "type": "video"
         },
         {
-          "src": "assets/gifs/ClaireIsCalling2.gif",
-          "alt": "Clare is Calling development GIF 2",
-          "caption": "Clare is Calling — development footage 2."
+          "src": "assets/clips/ClaireIsCalling2.mp4",
+          "alt": "Clare is Calling development clip 2",
+          "caption": "Clare is Calling — development footage 2.",
+          "poster": "assets/clips/ClaireIsCalling2.jpg",
+          "type": "video"
         },
         {
           "src": "assets/clare-is-calling-cover.png",
@@ -482,23 +494,29 @@ window.PORTFOLIO_CONTENT = {
       "detailOverview": [
         "Explore the development footage below. A detailed case study with my contributions and takeaways is coming soon."
       ],
-      "image": "assets/gifs/Improvised1.gif",
+      "image": "assets/clips/Improvised1.jpg",
       "tags": [],
       "media": [
         {
-          "src": "assets/gifs/Improvised1.gif",
-          "alt": "Improvised development GIF 1",
-          "caption": "Improvised — development footage 1."
+          "src": "assets/clips/Improvised1.mp4",
+          "alt": "Improvised development clip 1",
+          "caption": "Improvised — development footage 1.",
+          "poster": "assets/clips/Improvised1.jpg",
+          "type": "video"
         },
         {
-          "src": "assets/gifs/Improvised2.gif",
-          "alt": "Improvised development GIF 2",
-          "caption": "Improvised — development footage 2."
+          "src": "assets/clips/Improvised2.mp4",
+          "alt": "Improvised development clip 2",
+          "caption": "Improvised — development footage 2.",
+          "poster": "assets/clips/Improvised2.jpg",
+          "type": "video"
         },
         {
-          "src": "assets/gifs/Improvised3.gif",
-          "alt": "Improvised development GIF 3",
-          "caption": "Improvised — development footage 3."
+          "src": "assets/clips/Improvised3.mp4",
+          "alt": "Improvised development clip 3",
+          "caption": "Improvised — development footage 3.",
+          "poster": "assets/clips/Improvised3.jpg",
+          "type": "video"
         }
       ],
       "links": [
@@ -519,33 +537,43 @@ window.PORTFOLIO_CONTENT = {
       "detailOverview": [
         "Explore the development footage below. A detailed case study with my contributions and takeaways is coming soon."
       ],
-      "image": "assets/gifs/DigitalDefenders1.gif",
+      "image": "assets/clips/DigitalDefenders1.jpg",
       "tags": [],
       "media": [
         {
-          "src": "assets/gifs/DigitalDefenders1.gif",
-          "alt": "Digital Defenders development GIF 1",
-          "caption": "Digital Defenders — development footage 1."
+          "src": "assets/clips/DigitalDefenders1.mp4",
+          "alt": "Digital Defenders development clip 1",
+          "caption": "Digital Defenders — development footage 1.",
+          "poster": "assets/clips/DigitalDefenders1.jpg",
+          "type": "video"
         },
         {
-          "src": "assets/gifs/DigitalDefenders2.gif",
-          "alt": "Digital Defenders development GIF 2",
-          "caption": "Digital Defenders — development footage 2."
+          "src": "assets/clips/DigitalDefenders2.mp4",
+          "alt": "Digital Defenders development clip 2",
+          "caption": "Digital Defenders — development footage 2.",
+          "poster": "assets/clips/DigitalDefenders2.jpg",
+          "type": "video"
         },
         {
-          "src": "assets/gifs/DigitalDefenders3.gif",
-          "alt": "Digital Defenders development GIF 3",
-          "caption": "Digital Defenders — development footage 3."
+          "src": "assets/clips/DigitalDefenders3.mp4",
+          "alt": "Digital Defenders development clip 3",
+          "caption": "Digital Defenders — development footage 3.",
+          "poster": "assets/clips/DigitalDefenders3.jpg",
+          "type": "video"
         },
         {
-          "src": "assets/gifs/DigitalDefenders4.gif",
-          "alt": "Digital Defenders development GIF 4",
-          "caption": "Digital Defenders — development footage 4."
+          "src": "assets/clips/DigitalDefenders4.mp4",
+          "alt": "Digital Defenders development clip 4",
+          "caption": "Digital Defenders — development footage 4.",
+          "poster": "assets/clips/DigitalDefenders4.jpg",
+          "type": "video"
         },
         {
-          "src": "assets/gifs/DigitalDefenders5.gif",
-          "alt": "Digital Defenders development GIF 5",
-          "caption": "Digital Defenders — development footage 5."
+          "src": "assets/clips/DigitalDefenders5.mp4",
+          "alt": "Digital Defenders development clip 5",
+          "caption": "Digital Defenders — development footage 5.",
+          "poster": "assets/clips/DigitalDefenders5.jpg",
+          "type": "video"
         }
       ],
       "links": [

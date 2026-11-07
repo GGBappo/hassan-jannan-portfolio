@@ -58,7 +58,7 @@
   renderOverview((project.detailOverview && project.detailOverview.length) ? project.detailOverview : [project.description || ""]);
   renderList("project-details-list", project.details || []);
   renderList("project-learnings-list", project.learnings || []);
-  renderMedia(project.media || []);
+  window.ProjectGallery.render(project.media || []);
 
   function applyTheme(theme) {
     setVar("--accent", theme.accent);
@@ -143,71 +143,6 @@
     container.innerHTML = items.map(function (item) {
       return "<li>" + escapeHtml(item) + "</li>";
     }).join("");
-  }
-
-  function renderMedia(items) {
-    const visibleItems = items.filter(function (item) {
-      return !item.caseStudyHidden;
-    });
-    const grid = byId("project-media-grid");
-    grid.innerHTML = visibleItems.map(function (item) {
-      const imageMarkup = '<button class="media-enlarge" type="button" data-media-index="' + visibleItems.indexOf(item) + '" aria-haspopup="dialog" aria-controls="media-viewer" aria-label="' + escapeAttr('Enlarge ' + (item.alt || 'project media')) + '"><img src="' + escapeAttr(item.src || '') + '" alt="' + escapeAttr(item.alt || 'Project media') + '" loading="lazy"><span class="media-enlarge-label" aria-hidden="true">⤢ Enlarge</span></button>';
-      const linkMarkup = item.href && item.linkLabel
-        ? '<a class="media-caption-link" href="' + escapeAttr(item.href) + '"' + linkAttrs(item.href, item.newTab !== false) + ">" + escapeHtml(item.linkLabel) + "</a>"
-        : "";
-      return [
-        '<figure class="media-card reveal visible">',
-        imageMarkup,
-        item.caption ? '<figcaption>' + escapeHtml(item.caption) + "</figcaption>" : "",
-        linkMarkup,
-        "</figure>"
-      ].join("");
-    }).join("");
-
-    byId("project-gallery-section").hidden = visibleItems.length === 0;
-    initMediaViewer(visibleItems);
-  }
-
-  function initMediaViewer(items) {
-    const dialog = byId('media-viewer');
-    const image = byId('media-viewer-image');
-    const previous = byId('media-viewer-prev');
-    const next = byId('media-viewer-next');
-    let current = 0;
-    let trigger;
-    let oldOverflow;
-    function show(index) {
-      current = index;
-      const item = items[current];
-      image.src = item.fullSrc || item.src;
-      image.alt = item.alt || 'Project media';
-      byId('media-viewer-caption').textContent = item.caption || item.alt || '';
-      byId('media-viewer-status').textContent = (current + 1) + ' / ' + items.length;
-      previous.disabled = current === 0;
-      next.disabled = current === items.length - 1;
-    }
-    byId('project-media-grid').addEventListener('click', function (event) {
-      const button = event.target.closest('.media-enlarge');
-      if (!button) return;
-      trigger = button;
-      show(Number(button.dataset.mediaIndex));
-      oldOverflow = document.body.style.overflow;
-      document.body.style.overflow = 'hidden';
-      dialog.showModal();
-    });
-    previous.addEventListener('click', function () { if (current > 0) show(current - 1); });
-    next.addEventListener('click', function () { if (current < items.length - 1) show(current + 1); });
-    byId('media-viewer-close').addEventListener('click', function () { dialog.close(); });
-    dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
-    dialog.addEventListener('keydown', function (event) {
-      if (event.key === 'ArrowLeft' && current > 0) { event.preventDefault(); show(current - 1); }
-      if (event.key === 'ArrowRight' && current < items.length - 1) { event.preventDefault(); show(current + 1); }
-    });
-    dialog.addEventListener('close', function () {
-      document.body.style.overflow = oldOverflow || '';
-      image.removeAttribute('src');
-      if (trigger) trigger.focus();
-    });
   }
 
   function firstExternalProjectLink(links) {
