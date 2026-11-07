@@ -1535,7 +1535,7 @@ a:active, button:active:not(:disabled) { transform: translateY(1px); }
 .gallery-controls .button:disabled { opacity: .4; cursor: default; transform: none; box-shadow: none; }
 #gallery-status { min-width: 3rem; text-align: center; }
 #gallery-pause { margin-left: auto; }
-.media-scroller { display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(280px, 72%); gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: .25rem .25rem 1rem; scrollbar-width: auto; scrollbar-color: #f17189 #292329; }
+.media-scroller { display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: clamp(280px, 60vw, 800px); gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: .25rem .25rem 1rem; scrollbar-width: auto; scrollbar-color: #f17189 #292329; }
 .media-scroller::-webkit-scrollbar { height: 12px; }
 .media-scroller::-webkit-scrollbar-track { background: #292329; border-radius: 8px; }
 .media-scroller::-webkit-scrollbar-thumb { background: #f17189; border-radius: 8px; border: 2px solid #292329; }
@@ -1546,7 +1546,7 @@ a:active, button:active:not(:disabled) { transform: translateY(1px); }
 #media-viewer-stage[data-state="loading"]::after { content: 'Loading media…'; position: absolute; padding: .6rem 1rem; border-radius: 6px; color: #fff; background: #21151fee; pointer-events: none; }
 #media-viewer-stage[data-state="error"] p { padding: 2rem; text-align: center; }
 @media (max-width: 680px) {
- .media-scroller { grid-auto-columns: 88%; }
+ .media-scroller { grid-auto-columns: 82vw; }
  .gallery-controls .button { width: auto; font-size: .8rem; }
  #gallery-pause { margin-left: 0; }
  .project-page:not(.ai-workflow-page) .section { padding: 2rem 0; }
