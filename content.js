@@ -490,15 +490,36 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "slug": "improvised",
-      "title": "Improvised",
-      "category": "Game Project",
-      "caseStudyPending": true,
-      "description": "Development footage from Improvised. A detailed case study will be added next.",
+      "title": "IMPROVISED",
+      "category": "Comedy Visual Novel & Puzzle Game",
+      "description": "In Voyager Signal Games’ first prototype, an undercover alien defuses bombs with whatever tools are nearby. I built the shop and item systems, connected tasks to the player’s budget, and coordinated the team’s work on the prototype.",
+      "caseStudy": {
+        "role": "Unity Gameplay Programmer & Team Lead",
+        "timeline": "In development",
+        "team": "Voyager Signal Games",
+        "tools": "Unity, C#, ScriptableObjects, Unity Events, Animator",
+        "challenge": "Make tools, tasks, and the shop work together during timed missions while giving the team a straightforward way to add new items and bomb interactions.",
+        "approach": "I separated item data, shop UI, and shared item behavior, then wired tool interactions through Unity Events so the team could configure them in the Inspector."
+      },
       "detailOverview": [
-        "Explore the development footage below. A detailed case study with my contributions and takeaways is coming soon."
+        "IMPROVISED mixes a comedy visual novel with timed bomb-defusal puzzles. Players have to make do with what they can afford or find, from defusal equipment to nail clippers, duct tape, or a potato. Each mission introduces characters and clues that connect to a larger story.",
+        "My focus is the loop between earning money, buying tools, and using them in a mission. The team’s current prototype brings together a countdown, strikes, tasks, tool interactions, working wires, and a more responsive UI. We’re continuing to build additional bomb modules and tools."
       ],
       "image": "assets/clips/Improvised1.jpg",
-      "tags": [],
+      "tags": ["Gameplay Programming", "UI Architecture", "Systems Design", "Team Coordination"],
+      "details": [
+        "Built a shop with a Shop ScriptableObject that references individual Item ScriptableObjects. ItemShop displays item information, and ItemShopPanel handles purchases and places tools into managed inventory slots.",
+        "Created InteractableItem as a shared base class for dragging and hovering over tools. Refactored item and bomb scripts to use Inspector-configured Unity Events and added a trigger to reset items.",
+        "Implemented the task system and connected completion rewards to the player’s budget. Built a tooltip system that selects from lists of tips based on the number of strikes the player has.",
+        "Animated shop UI panels in Unity’s Animator using triggers, animation curves, and transitions for more responsive feedback.",
+        "Started prototyping a clothing system that uses enums to identify buffs and a list to iterate through them.",
+        "Led discussions about next steps, assigned tasks, and worked with teammates to balance development priorities with their schedules."
+      ],
+      "learnings": [
+        "Separating item data from UI and shared behavior makes it easier to add tools without rewriting purchase logic.",
+        "Inspector-configured events give teammates a way to wire up new interactions while keeping shared code focused on behaviors used across tools.",
+        "Animator triggers, curves, and transitions gave me control over how the shop UI responds as players interact with it."
+      ],
       "media": [
         {
           "src": "assets/clips/Improvised1.mp4",
@@ -524,10 +545,16 @@ window.PORTFOLIO_CONTENT = {
       ],
       "links": [
         {
-          "label": "View Gallery",
+          "label": "Case Study",
           "href": "project.html?project=improvised",
           "icon": "layers",
           "style": "secondary"
+        },
+        {
+          "label": "Company Website",
+          "href": "https://ggbappo.github.io/VoyagerSignalGames/",
+          "icon": "arrow-up-right",
+          "style": "primary"
         }
       ]
     },
