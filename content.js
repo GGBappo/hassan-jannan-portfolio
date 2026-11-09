@@ -39,8 +39,20 @@ window.PORTFOLIO_CONTENT = {
   },
   "navigation": [
     {
-      "label": "Education",
+      "label": "Home",
       "href": "index.html"
+    },
+    {
+      "label": "About",
+      "href": "index.html#about"
+    },
+    {
+      "label": "Experience",
+      "href": "index.html#experience"
+    },
+    {
+      "label": "Education",
+      "href": "index.html#education"
     },
     {
       "label": "Game Development",
@@ -72,14 +84,22 @@ window.PORTFOLIO_CONTENT = {
     "contactLinkLabel": "Connect on LinkedIn",
     "actions": [
       {
-        "label": "View Education",
-        "href": "#education",
+        "label": "View Game Projects",
+        "href": "game-development.html",
         "style": "primary",
         "icon": "arrow-up-right"
+      },
+      {
+        "label": "View Software Projects",
+        "href": "software-engineering.html",
+        "style": "secondary",
+        "icon": "code"
       }
     ],
     "skills": [
       "Unity / C#",
+      "C++",
+      "Java",
       "Git",
       "Gameplay Systems",
       "UI Programming",

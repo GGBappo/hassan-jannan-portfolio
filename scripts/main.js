@@ -32,13 +32,16 @@
   renderFooter(content.footerNote || "", profile.name || "Your Name");
   initBehavior();
 
-  if (page === "index.html") {
-    const movedSections = {
-      "#about": "game-development.html#about",
-      "#expertise": "game-development.html#expertise",
-      "#experience": "game-development.html#experience",
-      "#projects": "game-development.html#projects"
-    };
+  const movedSectionsByPage = {
+    "index.html": { "#projects": "game-development.html#projects" },
+    "game-development.html": {
+      "#about": "index.html#about",
+      "#expertise": "index.html#expertise",
+      "#experience": "index.html#experience"
+    }
+  };
+  const movedSections = movedSectionsByPage[page];
+  if (movedSections) {
     const redirectSection = function () {
       const destination = movedSections[location.hash];
       if (destination) location.replace(destination);
