@@ -1,0 +1,3 @@
+# The live galleries use the optimized files in assets/clips.
+exclude:
+  - assets/gifs
