@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ef183d">
+  <link rel="icon" href="assets/persona/joker-mask.webp" type="image/webp">
+  <title>Software Engineering | Hassan Jannan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261106royal4">
+  <link rel="stylesheet" href="royal.css?v=20261109tracks">
+  <script defer src="scripts/royal.js?v=20261106royal4"></script>
+  <script defer src="content.js?v=20261109tracks"></script>
+  <script defer src="scripts/main.js?v=20261109tracks"></script>
+</head>
+<body data-page="software-engineering.html">
+  <header class="navbar" id="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" id="brand-link" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text" id="brand-name">Your Name</span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-menu" aria-label="Primary">
+        <ul class="nav-links" id="nav-links"></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="hero">
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Software Engineering</p>
+          <div class="hero-heading-row">
+            <h1 class="hero-title"><span>Building software</span><span class="accent-line">in C++ &amp; Java.</span></h1>
+          </div>
+          <p class="hero-summary">Selected coursework from the University of New Haven, from measuring sorting performance to building desktop interfaces and HTTP endpoints.</p>
+          <div class="hero-actions"><a class="button primary" href="#cpp">C++ Coursework</a> <a class="button secondary" href="#java">Java Coursework</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="cpp" aria-labelledby="cpp-heading">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="section-kicker">Algorithms &amp; Systems</p>
+          <h2 id="cpp-heading">C++ Coursework</h2>
+        </div>
+        <div class="card-grid coursework-grid">
+          <article class="detail-panel coursework-card reveal">
+            <p class="section-kicker">Data Structures Project</p>
+            <h3 class="card-title">Sorting Algorithm Benchmark</h3>
+            <p>Compared six sorting algorithms on generated datasets ranging from 50,000 to 600,000 integers. The program loads five datasets per size and averages the time spent sorting.</p>
+            <p><strong>What I practiced</strong> Keeping dataset generation and file loading outside the timed run so I could compare how different algorithms scale.</p>
+            <div class="tag-row"><span class="tag">C++</span><span class="tag">Algorithm Analysis</span><span class="tag">Benchmarking</span></div>
+          </article>
+          <article class="detail-panel coursework-card reveal">
+            <p class="section-kicker">Group Final Project</p>
+            <h3 class="card-title">Patient Registry &amp; Scheduling Prototype</h3>
+            <p>A group console application for registering patients and managing appointments. I worked on the registry and menu code that connects record entry and lookup to the scheduling workflow.</p>
+            <p><strong>What I practiced</strong> Modeling records with classes and integrating code written by different teammates behind a single menu.</p>
+            <div class="tag-row"><span class="tag">C++</span><span class="tag">Object-Oriented Design</span><span class="tag">Team Integration</span></div>
+          </article>
+          <article class="detail-panel coursework-card reveal">
+            <p class="section-kicker">Programming Exercise</p>
+            <h3 class="card-title">IPv4 Network Address Calculator</h3>
+            <p>Parsed a dotted IPv4 address and subnet mask into octets, applied a bitwise AND to each pair, and formatted the resulting network address.</p>
+            <p><strong>What I practiced</strong> Converting text input into numeric data and using bitwise operations to solve a networking problem.</p>
+            <div class="tag-row"><span class="tag">C++</span><span class="tag">Parsing</span><span class="tag">Bitwise Operations</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="java" aria-labelledby="java-heading">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="section-kicker">Applications &amp; APIs</p>
+          <h2 id="java-heading">Java Coursework</h2>
+        </div>
+        <div class="card-grid coursework-grid">
+          <article class="detail-panel coursework-card reveal">
+            <p class="section-kicker">Web API Exercise</p>
+            <h3 class="card-title">User Management API</h3>
+            <p>Built a Spring Boot controller with endpoints to list, retrieve, create, update, and delete sample user records stored in memory.</p>
+            <p><strong>What I practiced</strong> Mapping HTTP methods and path parameters to operations on a collection of records.</p>
+            <div class="tag-row"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">HTTP Routing</span></div>
+          </article>
+          <article class="detail-panel coursework-card reveal">
+            <p class="section-kicker">Desktop Interface Exercise</p>
+            <h3 class="card-title">Interactive pH Model</h3>
+            <p>Built a JavaFX slider that updates the displayed pH, acidity classification, and warning message as the user changes the value.</p>
+            <p><strong>What I practiced</strong> Using a property listener to keep several interface elements in sync with one input.</p>
+            <div class="tag-row"><span class="tag">JavaFX</span><span class="tag">Event-Driven UI</span><span class="tag">Property Listeners</span></div>
+          </article>
+          <article class="detail-panel coursework-card reveal">
+            <p class="section-kicker">Object-Oriented Programming Lab</p>
+            <h3 class="card-title">Library Catalog</h3>
+            <p>Modeled books and their availability in a console catalog with author filtering, checkouts, and returns.</p>
+            <p><strong>What I practiced</strong> Using collections to find records and guarding state changes when a book is already checked out or returned.</p>
+            <div class="tag-row"><span class="tag">Java</span><span class="tag">Collections</span><span class="tag">State Management</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p id="footer-note"></p>
+      <p class="footer-meta"><span id="copyright-year"></span> <span id="footer-name"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

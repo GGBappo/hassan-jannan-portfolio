@@ -196,7 +196,29 @@ html.tab-inactive * { animation-play-state: paused !important; }
 #hero .hero-lower { margin-top: 2.25rem; }
 .about-sidebar { display: grid; gap: 1.7rem; min-width: 0; }
 .about-sidebar .contact-bubble { position: static; width: calc(100% - 8px); max-width: none; margin: 0; transform: rotate(1deg); }
+.portfolio-contact { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.5rem; scroll-margin-top: var(--nav-height); }
+.portfolio-contact h2 { font-size: 2rem; }
+.portfolio-contact .social-link { overflow-wrap: anywhere; }
+.game-skills { margin: 0 0 1.5rem; }
+.game-projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.game-projects-grid .tag-row { min-height: 0; }
+.studio-project-card { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); grid-template-rows: 1fr; }
+.studio-project-card .project-media { aspect-ratio: auto; border-bottom: 0; border-right: 3px solid var(--royal-red); }
+.studio-project-card .project-media img { position: absolute; inset: 0; }
+.studio-project-card .project-body { grid-template-rows: none; align-content: center; padding: clamp(1.25rem, 3vw, 2.5rem); }
+.studio-project-card .project-title { font-size: clamp(2rem, 4vw, 3.5rem); }
+.studio-project-card .project-category, .studio-project-card .tag-row { min-height: 0; }
+.coursework-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.coursework-card { display: flex; flex-direction: column; gap: .85rem; border-top: 3px solid var(--royal-red); padding: 1.35rem; }
+.coursework-card strong { display: block; color: var(--royal-gold); }
+.coursework-card .tag-row { margin-top: auto; }
+@media (max-width: 960px) {
+ .coursework-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 680px) {
+ .studio-project-card, .game-projects-grid, .coursework-grid { grid-template-columns: 1fr; }
+ .studio-project-card { grid-template-rows: auto 1fr; }
+ .studio-project-card .project-media { aspect-ratio: 16 / 9; border-right: 0; border-bottom: 3px solid var(--royal-red); }
  .royal-ambient::after { background-position: 64% center; opacity: .32; }
  .persona-workflow .royal-ambient::after { opacity: .3; }
  .night-car { width: 150px; height: 88px; }

@@ -1,5 +1,4 @@
 window.PORTFOLIO_CONTENT = {
-  "siteTitle": "Hassan Jannan | Portfolio",
   "theme": {
     "accent": "#ef183d",
     "accentStrong": "#ff718b",
@@ -32,7 +31,7 @@ window.PORTFOLIO_CONTENT = {
     },
     "projects": {
       "kicker": "Projects",
-      "title": "The project dossiers."
+      "title": "Selected game projects."
     },
     "contact": {
       "kicker": "Connect"
@@ -40,24 +39,16 @@ window.PORTFOLIO_CONTENT = {
   },
   "navigation": [
     {
-      "label": "Home",
-      "href": "#hero"
-    },
-    {
-      "label": "About",
-      "href": "#about"
-    },
-    {
-      "label": "Experience",
-      "href": "#experience"
-    },
-    {
       "label": "Education",
-      "href": "#education"
+      "href": "index.html"
     },
     {
-      "label": "Projects",
-      "href": "#projects"
+      "label": "Game Development",
+      "href": "game-development.html"
+    },
+    {
+      "label": "Software Engineering",
+      "href": "software-engineering.html"
     },
     {
       "label": "AI Workflow",
@@ -65,39 +56,30 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "label": "Contact",
-      "href": "#contact"
+      "href": "index.html#contact"
     }
   ],
   "profile": {
     "name": "Hassan Jannan",
-    "role": "Unity Gameplay Programmer & Team Lead",
+    "role": "Unity Developer & Software Engineer",
     "heroHeading": [
-      "Building better",
-      "game experiences."
+      "Hassan Jannan"
     ],
-    "accentLine": 1,
+    "accentLine": 0,
     "contactLabel": "Want to connect?",
     "contactCopy": "I am interested in internships, junior game development roles, and collaborative projects.",
     "contactHref": "https://www.linkedin.com/in/hassan-jannan-7a652431b/",
     "contactLinkLabel": "Connect on LinkedIn",
     "actions": [
       {
-        "label": "View Projects",
-        "href": "#projects",
+        "label": "View Education",
+        "href": "#education",
         "style": "primary",
         "icon": "arrow-up-right"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com/in/hassan-jannan-7a652431b/",
-        "style": "secondary",
-        "icon": "linkedin"
       }
     ],
     "skills": [
       "Unity / C#",
-      "C++",
-      "Java",
       "Git",
       "Gameplay Systems",
       "UI Programming",
@@ -617,8 +599,8 @@ window.PORTFOLIO_CONTENT = {
     }
   ],
   "contact": {
-    "heading": "Let's connect about game development.",
-    "summary": "I am always interested in meeting other developers, learning from new opportunities, and contributing to strong collaborative game projects.",
+    "heading": "Let’s connect.",
+    "summary": "I’m interested in game development and software engineering opportunities.",
     "location": "University of New Haven",
     "socials": [
       {

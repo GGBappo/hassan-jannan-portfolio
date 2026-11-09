@@ -12,24 +12,40 @@
   const experience = Array.isArray(content.experience) ? content.experience : [];
   const education = Array.isArray(content.education) ? content.education : [];
   const projects = Array.isArray(content.projects) ? content.projects : [];
+  const page = document.body.dataset.page;
   const contact = content.contact || {};
   const sectionHeaders = content.sectionHeaders || {};
 
   applyTheme(content.theme || {});
-  document.title = content.siteTitle || [profile.name, "Portfolio"].filter(Boolean).join(" | ");
-
   renderBrand(profile.name || "Your Name");
   renderNav(content.navigation || []);
   renderSectionHeaders(sectionHeaders);
-  renderHero(profile);
-  renderHighlights(highlights);
-  renderExpertise(expertise);
-  renderExperience(experience);
-  renderEducation(education);
-  renderProjects(projects);
-    renderContact(contact, profile.name || "Your Name");
-    renderFooter(content.footerNote || "", profile.name || "Your Name");
-    initBehavior();
+  if (byId("hero-title")) renderHero(profile);
+  if (byId("contact-bubble")) renderContactBubble(profile);
+  if (byId("skill-ribbon")) renderSkills(profile);
+  if (byId("highlights-grid")) renderHighlights(highlights);
+  if (byId("expertise-grid")) renderExpertise(expertise);
+  if (byId("experience-list")) renderExperience(experience);
+  if (byId("education-grid")) renderEducation(education);
+  if (byId("project-grid")) renderProjects(projects);
+  if (byId("contact")) renderContact(contact);
+  renderFooter(content.footerNote || "", profile.name || "Your Name");
+  initBehavior();
+
+  if (page === "index.html") {
+    const movedSections = {
+      "#about": "game-development.html#about",
+      "#expertise": "game-development.html#expertise",
+      "#experience": "game-development.html#experience",
+      "#projects": "game-development.html#projects"
+    };
+    const redirectSection = function () {
+      const destination = movedSections[location.hash];
+      if (destination) location.replace(destination);
+    };
+    redirectSection();
+    window.addEventListener("hashchange", redirectSection);
+  }
 
   function applyTheme(theme) {
     setVar("--accent", theme.accent);
@@ -66,6 +82,7 @@
     }
 
     footerName.textContent = name;
+    byId("brand-link").setAttribute("aria-label", "Back to " + name + " home");
   }
 
   function renderNav(items) {
@@ -73,7 +90,8 @@
     nav.innerHTML = items.map(function (item) {
       const href = item.href || "#hero";
       const className = item.style === "button" ? "nav-link button-link" : "nav-link";
-      return '<li><a class="' + className + '" href="' + escapeAttr(href) + '"' + linkAttrs(href) + ">" + escapeHtml(item.label || "Link") + "</a></li>";
+      const current = href === page ? ' aria-current="page"' : "";
+      return '<li><a class="' + className + '" href="' + escapeAttr(href) + '"' + current + linkAttrs(href) + ">" + escapeHtml(item.label || "Link") + "</a></li>";
     }).join("");
   }
 
@@ -94,6 +112,12 @@
   function renderHero(data) {
     setText("hero-role", data.role, "");
     byId("hero-title").innerHTML = renderHeroTitle(data.heroHeading || [], Number.isInteger(data.accentLine) ? data.accentLine : -1);
+    byId("hero-actions").innerHTML = (data.actions || []).map(function (action) {
+      return renderButton(action, "button");
+    }).join("");
+  }
+
+  function renderContactBubble(data) {
     setText("contact-bubble-label", data.contactLabel, "Get in touch");
     setText("contact-bubble-copy", data.contactCopy, "");
 
@@ -103,22 +127,14 @@
     contactLink.href = preferredContactHref;
     syncLinkBehavior(contactLink, preferredContactHref);
     contactLink.textContent = data.contactLinkLabel || data.email || "Contact";
+  }
 
-    const heroImage = byId("hero-image");
-    if (heroImage) {
-      heroImage.src = data.heroImage || "assets/profile-placeholder.svg";
-      heroImage.alt = (data.name || "Profile") + " image";
-    }
-
+  function renderSkills(data) {
     byId("skill-ribbon").innerHTML = (data.skills || []).map(function (item) {
       return '<span class="skill-pill">' + escapeHtml(item) + "</span>";
     }).join("");
 
     byId("soft-skill-ribbon").innerHTML = (data.softSkills || []).map(function (item) { return '<span class="skill-pill">' + escapeHtml(item) + '</span>'; }).join('');
-
-    byId("hero-actions").innerHTML = (data.actions || []).map(function (action) {
-      return renderButton(action, "button");
-    }).join("");
   }
 
   function renderHighlights(items) {
@@ -199,37 +215,44 @@
   }
 
   function renderProjects(items) {
+    const studioProject = items.find(function (item) { return item.slug === "improvised"; });
+    const selectedProjects = items.filter(function (item) { return item !== studioProject; });
+    if (studioProject) byId("studio-project").innerHTML = renderProjectCard(studioProject, true);
+    toggleSection("voyager-signal-games", Boolean(studioProject));
+
     const grid = byId("project-grid");
-    grid.innerHTML = items.map(function (item) {
-      const tags = (item.tags || []).map(function (tag) {
-        return '<span class="tag">' + escapeHtml(tag) + "</span>";
-      }).join("");
-      const cardClass = item.featured ? "project-card reveal featured" : "project-card reveal";
-      const caseLinks = (item.links || []).filter(function (link) { return /project\.html/i.test(link.href || ""); }).map(function (link) { return renderButton(Object.assign({}, link, { style: "secondary" }), "button"); }).join("");
-      const links = (item.links || []).filter(function (link) { return !/project\.html/i.test(link.href || ""); }).map(function (link) { return renderButton(link, "button"); }).join("");
-
-      return [
-        '<article class="' + cardClass + '">',
-        '<div class="project-media">',
-        '<img src="' + escapeAttr(item.image || "assets/project-editorial.svg") + '" alt="' + escapeAttr(item.title || "Project preview") + '" loading="lazy">',
-        "</div>",
-          '<div class="project-body">',
-          '<p class="project-category">' + escapeHtml(item.category || "") + "</p>",
-          '<h3 class="project-title">' + escapeHtml(item.title || "") + "</h3>",
-          '<div class="project-case-link">' + caseLinks + "</div>",
-          '<p class="card-copy">' + escapeHtml(item.description || "") + "</p>",
-          '<div class="tag-row">' + tags + "</div>",
-          '<div class="project-links">' + (item.caseStudyPending ? '<p class="project-status">Case study coming soon</p>' : links) + "</div>",
-          "</div>",
-          "</article>"
-        ].join("");
-    }).join("");
-
-    toggleSection("projects", items.length > 0);
-
+    grid.innerHTML = selectedProjects.map(function (item) { return renderProjectCard(item, false); }).join("");
+    toggleSection("projects", selectedProjects.length > 0);
   }
 
-  function renderContact(data, name) {
+  function renderProjectCard(item, featuredStudio) {
+    const tags = (item.tags || []).map(function (tag) {
+      return '<span class="tag">' + escapeHtml(tag) + "</span>";
+    }).join("");
+    const cardClasses = ["project-card", "reveal"];
+    if (item.featured || featuredStudio) cardClasses.push("featured");
+    if (featuredStudio) cardClasses.push("studio-project-card");
+    const caseLinks = (item.links || []).filter(function (link) { return /project\.html/i.test(link.href || ""); }).map(function (link) { return renderButton(Object.assign({}, link, { style: "secondary" }), "button"); }).join("");
+    const links = (item.links || []).filter(function (link) { return !/project\.html/i.test(link.href || ""); }).map(function (link) { return renderButton(link, "button"); }).join("");
+
+    return [
+      '<article class="' + cardClasses.join(" ") + '">',
+      '<div class="project-media">',
+      '<img src="' + escapeAttr(item.image || "assets/project-editorial.svg") + '" alt="' + escapeAttr(item.title || "Project preview") + '" loading="lazy">',
+      "</div>",
+      '<div class="project-body">',
+      '<p class="project-category">' + escapeHtml(item.category || "") + "</p>",
+      '<h3 class="project-title">' + escapeHtml(item.title || "") + "</h3>",
+      '<div class="project-case-link">' + caseLinks + "</div>",
+      '<p class="card-copy">' + escapeHtml(item.description || "") + "</p>",
+      '<div class="tag-row">' + tags + "</div>",
+      '<div class="project-links">' + (item.caseStudyPending ? '<p class="project-status">Case study coming soon</p>' : links) + "</div>",
+      "</div>",
+      "</article>"
+    ].join("");
+  }
+
+  function renderContact(data) {
     setText("contact-heading", data.heading, "Get in touch");
     setText("contact-summary", data.summary, "");
     setText("contact-location", data.location, "");
@@ -254,7 +277,6 @@
     }).join("");
 
     toggleSection("contact", (data.socials || []).length > 0 || Boolean(data.summary));
-    byId("brand-link").setAttribute("aria-label", "Back to " + name + " home");
   }
 
   function renderFooter(note, name) {

@@ -23,6 +23,13 @@
     return;
   }
 
+  const projectsHref = project.slug === "improvised"
+    ? "game-development.html#voyager-signal-games"
+    : "game-development.html#projects";
+  document.querySelectorAll("[data-projects-link]").forEach(function (link) {
+    link.href = projectsHref;
+  });
+
   document.title = project.title + " | " + (((content.profile || {}).name) || "Portfolio");
   setText("project-category", project.category, "Project");
   setText("project-title", project.title, "Project");
@@ -48,7 +55,7 @@
     liveLinkNode.rel = "noreferrer";
     liveLinkNode.textContent = liveLink.label || "View Project";
   } else {
-    liveLinkNode.href = "index.html#projects";
+    liveLinkNode.href = projectsHref;
     liveLinkNode.removeAttribute("target");
     liveLinkNode.removeAttribute("rel");
     liveLinkNode.textContent = "Back to Projects";
@@ -108,7 +115,7 @@
       buttons.push(renderButton(link));
     });
 
-    buttons.push('<a class="button secondary" href="index.html#projects">Back to Portfolio</a>');
+    buttons.push('<a class="button secondary" href="' + projectsHref + '">Back to Game Development</a>');
     actions.innerHTML = buttons.join("");
   }
 
