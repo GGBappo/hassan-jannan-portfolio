@@ -235,11 +235,15 @@
     const cardClasses = ["project-card", "reveal"];
     if (item.featured || featuredStudio) cardClasses.push("featured");
     if (featuredStudio) cardClasses.push("studio-project-card");
+    const engineBadge = item.engine === "Unity"
+      ? '<div class="project-engine-badge"><img src="assets/made-with-unity.png" alt="Made with Unity" width="415" height="100"></div>'
+      : "";
     const caseLinks = (item.links || []).filter(function (link) { return /project\.html/i.test(link.href || ""); }).map(function (link) { return renderButton(Object.assign({}, link, { style: "secondary" }), "button"); }).join("");
     const links = (item.links || []).filter(function (link) { return !/project\.html/i.test(link.href || ""); }).map(function (link) { return renderButton(link, "button"); }).join("");
 
     return [
       '<article class="' + cardClasses.join(" ") + '">',
+      engineBadge,
       '<div class="project-media">',
       '<img src="' + escapeAttr(item.image || "assets/project-editorial.svg") + '" alt="' + escapeAttr(item.title || "Project preview") + '" loading="lazy">',
       "</div>",

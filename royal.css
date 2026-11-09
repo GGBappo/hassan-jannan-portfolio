@@ -60,6 +60,17 @@ h1,h2,h3,.brand,.project-title,.timeline-role,.button,.route-caption strong { fo
 .education-card:first-child .education-place { color: #f4c95d; }
 .project-card { border-top: 4px solid #faf8ef; }
 .project-card.featured { border-color: #faf8ef66; border-top-color: #ef183d; box-shadow: 5px 5px 0 #0008; }
+.project-engine-badge {
+  position: absolute;
+  z-index: 1;
+  inset: .6rem .6rem auto auto;
+  padding: .35rem .45rem;
+  border: 1px solid #08080c;
+  background: #faf8ef;
+  box-shadow: 2px 2px 0 #08080c;
+}
+.project-engine-badge img { display: block; width: clamp(5.75rem, 13vw, 6.75rem); height: auto; }
+.engine-attribution { color: var(--muted); font-size: .78rem; }
 .project-media { border-bottom: 3px solid #ef183d; }
 .project-media::after { display: none; }
 .project-body { gap: 1rem; }
@@ -207,6 +218,9 @@ html.tab-inactive * { animation-play-state: paused !important; }
 .studio-project-card .project-body { grid-template-rows: none; align-content: center; padding: clamp(1.25rem, 3vw, 2.5rem); }
 .studio-project-card .project-title { font-size: clamp(2rem, 4vw, 3.5rem); }
 .studio-project-card .project-category, .studio-project-card .tag-row { min-height: 0; }
+@media (min-width: 681px) {
+ .studio-project-card .project-engine-badge ~ .project-body { padding-top: 3.75rem; }
+}
 .coursework-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .coursework-card { display: flex; flex-direction: column; gap: .85rem; border-top: 3px solid var(--royal-red); padding: 1.35rem; }
 .coursework-card strong { display: block; color: var(--royal-gold); }

@@ -235,6 +235,7 @@ window.PORTFOLIO_CONTENT = {
   "projects": [
     {
       "slug": "cepheus",
+      "engine": "Unity",
       "featured": true,
       "category": "Horror Story Game",
       "title": "CEPHEUS",
@@ -321,6 +322,7 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "slug": "gnome-golem",
+      "engine": "Unity",
       "featured": true,
       "category": "Puzzle Adventure",
       "title": "Gnome & Golem",
@@ -408,6 +410,7 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "slug": "clare-is-calling",
+      "engine": "Unity",
       "featured": true,
       "category": "Psychological Horror",
       "title": "Clare is Calling",
@@ -492,6 +495,7 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "slug": "improvised",
+      "engine": "Unity",
       "title": "IMPROVISED",
       "category": "Comedy Visual Novel & Puzzle Game",
       "description": "In Voyager Signal Games’ first prototype, an undercover alien defuses bombs with whatever tools are nearby. I built the shop and item systems, connected tasks to the player’s budget, and coordinated the team’s work on the prototype.",
@@ -562,6 +566,7 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "slug": "digital-defenders",
+      "engine": "Unity",
       "title": "Digital Defenders",
       "category": "Game Project",
       "caseStudyPending": true,
