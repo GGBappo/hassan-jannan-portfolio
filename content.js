@@ -504,8 +504,8 @@ window.PORTFOLIO_CONTENT = {
         "timeline": "In development",
         "team": "Voyager Signal Games",
         "tools": "Unity, C#, ScriptableObjects, Unity Events, Animator",
-        "challenge": "Make tools, tasks, and the shop work together during timed missions while giving the team a straightforward way to add new items and bomb interactions.",
-        "approach": "I separated item data, shop UI, and shared item behavior, then wired tool interactions through Unity Events so the team could configure them in the Inspector."
+        "challenge": "My challenge is to keep a small indie team organized and moving in the same direction. I help the team develop ideas and decide what to build next while designing and implementing gameplay mechanics myself.",
+        "approach": "I separated item data, shop UI, and shared item behavior, then wired tool interactions through Unity Events so the team could configure them in the Inspector. I also worked on how in-game bomb components behave and respond to tools. I use Milanote to share changes, track tasks, and organize assets. I use Discord for day-to-day communication and progress updates, and hold team meetings to review work and agree on next steps."
       },
       "detailOverview": [
         "Real Certified Bomb Diffuser (really!), or RCBDr, mixes a comedy visual novel with timed bomb-defusal puzzles. Players have to make do with what they can afford or find, from defusal equipment to nail clippers, duct tape, or a potato. Each mission introduces characters and clues that connect to a larger story.",
