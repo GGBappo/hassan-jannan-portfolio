@@ -218,7 +218,7 @@
   }
 
   function renderProjects(items) {
-    const studioProject = items.find(function (item) { return item.slug === "improvised"; });
+    const studioProject = items.find(function (item) { return item.slug === "rcbdr"; });
     const selectedProjects = items.filter(function (item) { return item !== studioProject; });
     if (studioProject) byId("studio-project").innerHTML = renderProjectCard(studioProject, true);
     toggleSection("voyager-signal-games", Boolean(studioProject));

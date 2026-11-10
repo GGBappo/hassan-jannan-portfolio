@@ -7,7 +7,8 @@
 
   const root = document.documentElement;
   const params = new URLSearchParams(window.location.search);
-  const slug = params.get("project");
+  const requestedSlug = params.get("project");
+  const slug = requestedSlug === "improvised" ? "rcbdr" : requestedSlug;
   const projects = Array.isArray(content.projects) ? content.projects : [];
   const project = projects.find(function (item) {
     return item.slug === slug;
@@ -23,7 +24,7 @@
     return;
   }
 
-  const projectsHref = project.slug === "improvised"
+  const projectsHref = project.slug === "rcbdr"
     ? "game-development.html#voyager-signal-games"
     : "game-development.html#projects";
   document.querySelectorAll("[data-projects-link]").forEach(function (link) {

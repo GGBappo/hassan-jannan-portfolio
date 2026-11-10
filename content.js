@@ -494,11 +494,11 @@ window.PORTFOLIO_CONTENT = {
       ]
     },
     {
-      "slug": "improvised",
+      "slug": "rcbdr",
       "engine": "Unity",
-      "title": "IMPROVISED",
+      "title": "Real Certified Bomb Diffuser (really!)",
       "category": "Comedy Visual Novel & Puzzle Game",
-      "description": "In Voyager Signal Games’ first prototype, an undercover alien defuses bombs with whatever tools are nearby. I built the shop and item systems, connected tasks to the player’s budget, and coordinated the team’s work on the prototype.",
+      "description": "In Voyager Signal Games’ first prototype, RCBDr, an undercover alien defuses bombs with whatever tools are nearby. I built the shop and item systems, connected tasks to the player’s budget, and coordinated the team’s work on the prototype.",
       "caseStudy": {
         "role": "Unity Gameplay Programmer & Team Lead",
         "timeline": "In development",
@@ -508,7 +508,7 @@ window.PORTFOLIO_CONTENT = {
         "approach": "I separated item data, shop UI, and shared item behavior, then wired tool interactions through Unity Events so the team could configure them in the Inspector."
       },
       "detailOverview": [
-        "IMPROVISED mixes a comedy visual novel with timed bomb-defusal puzzles. Players have to make do with what they can afford or find, from defusal equipment to nail clippers, duct tape, or a potato. Each mission introduces characters and clues that connect to a larger story.",
+        "Real Certified Bomb Diffuser (really!), or RCBDr, mixes a comedy visual novel with timed bomb-defusal puzzles. Players have to make do with what they can afford or find, from defusal equipment to nail clippers, duct tape, or a potato. Each mission introduces characters and clues that connect to a larger story.",
         "My focus is the loop between earning money, buying tools, and using them in a mission. The team’s current prototype brings together a countdown, strikes, tasks, tool interactions, working wires, and a more responsive UI. We’re continuing to build additional bomb modules and tools."
       ],
       "image": "assets/clips/Improvised1.jpg",
@@ -529,22 +529,22 @@ window.PORTFOLIO_CONTENT = {
       "media": [
         {
           "src": "assets/clips/Improvised1.mp4",
-          "alt": "Improvised development clip 1",
-          "caption": "Improvised — development footage 1.",
+          "alt": "RCBDr development clip 1",
+          "caption": "RCBDr development footage 1.",
           "poster": "assets/clips/Improvised1.jpg",
           "type": "video"
         },
         {
           "src": "assets/clips/Improvised2.mp4",
-          "alt": "Improvised development clip 2",
-          "caption": "Improvised — development footage 2.",
+          "alt": "RCBDr development clip 2",
+          "caption": "RCBDr development footage 2.",
           "poster": "assets/clips/Improvised2.jpg",
           "type": "video"
         },
         {
           "src": "assets/clips/Improvised3.mp4",
-          "alt": "Improvised development clip 3",
-          "caption": "Improvised — development footage 3.",
+          "alt": "RCBDr development clip 3",
+          "caption": "RCBDr development footage 3.",
           "poster": "assets/clips/Improvised3.jpg",
           "type": "video"
         }
@@ -552,7 +552,7 @@ window.PORTFOLIO_CONTENT = {
       "links": [
         {
           "label": "Case Study",
-          "href": "project.html?project=improvised",
+          "href": "project.html?project=rcbdr",
           "icon": "layers",
           "style": "secondary"
         },
