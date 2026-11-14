@@ -92,22 +92,32 @@
         </div>
         <template id="item-shop-feature">
           <article class="detail-panel contribution-feature" aria-labelledby="item-shop-title">
-            <figure class="contribution-demo">
-              <video controls playsinline loop preload="none" width="1280" height="720"
-                poster="assets/clips/Improvised3.jpg" aria-label="Item shop and tool interactions in an early RCBDr mission">
-                <source src="assets/clips/Improvised3.mp4" type="video/mp4">
-              </video>
-              <figcaption>Early prototype footage of the shop and tools in use.</figcaption>
-            </figure>
+            <div class="contribution-copy">
+              <figure class="contribution-demo">
+                <video controls playsinline loop preload="none" width="1280" height="720"
+                  poster="assets/clips/Improvised3.jpg" aria-label="Item shop and tool interactions in an early RCBDr mission">
+                  <source src="assets/clips/Improvised3.mp4" type="video/mp4">
+                </video>
+                <figcaption>Early prototype footage of the shop and tools in use.</figcaption>
+              </figure>
+              <h4>What the team added this cycle</h4>
+              <ul class="detail-list">
+                <li>A working countdown timer and a strike system that tracks mistakes and increases pressure.</li>
+                <li>Mission tasks players can complete while defusing bombs.</li>
+                <li>Tools that interact directly with bomb components, plus working wire mechanics.</li>
+                <li>A more interactive, responsive interface.</li>
+              </ul>
+            </div>
             <div class="contribution-copy">
               <h3 id="item-shop-title">Item Shop &amp; Tool Interactions</h3>
               <p>I built a mission shop where players spend their budget on tools, drag them into place, and sell them to free up space on the table.</p>
 
               <h4>How I built it</h4>
-              <p><code>ItemShop</code> displays each tool’s sprite, price, and hint from <code>Item_SO</code>. <code>ItemShopPanel</code> checks ownership and affordability, then uses a dictionary to track which tools occupy each spawn point.</p>
+              <p>I connected the shop through ScriptableObjects. <code>Shop_SO</code> holds a list of <code>Item_SO</code> assets. <code>ItemShopPanel</code> loops through that list to create the shop entries, and <code>ItemShop</code> reads each tool’s sprite, price, and hint from its asset. The panel also checks ownership and affordability and tracks which tools occupy each spawn point.</p>
 
               <h4>What I learned</h4>
               <ul class="detail-list">
+                <li><strong>ScriptableObjects and lists.</strong> Building the shop helped me get comfortable connecting assets through typed lists. I could change what the shop sold in the Inspector and have the menu reflect the new list.</li>
                 <li><strong>Purchase order.</strong> Tracing the budget and slot checks showed me why a shop should confirm space before charging the player.</li>
                 <li><strong>Drag behavior.</strong> Projecting a camera ray onto a plane at the tool’s height kept it under the cursor.</li>
                 <li><strong>UI input.</strong> I learned to disable the shop’s raycasts as it fades out so it stops intercepting clicks.</li>
