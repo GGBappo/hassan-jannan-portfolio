@@ -85,7 +85,7 @@ h1,h2,h3,.brand,.project-title,.timeline-role,.button,.route-caption strong { fo
 .project-page-facts { border-left: 5px solid #ef183d; }
 .project-page-facts .fact-card { background: #08080c; border-color: #faf8ef22; border-radius: 0; }
 .fact-label,.detail-panel-kicker,.case-study-label { color: #f4c95d; }
-.outfit-closet {
+.outfit-closet, .contribution-feature {
   display: grid;
   grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
   align-items: start;
@@ -93,15 +93,15 @@ h1,h2,h3,.brand,.project-title,.timeline-role,.button,.route-caption strong { fo
   margin-bottom: 1.5rem;
   padding: clamp(1rem, 3vw, 2rem);
 }
-.outfit-closet-demo { margin: 0; }
-.outfit-closet-demo img { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
-.outfit-closet-demo figcaption { margin-top: .75rem; }
-.outfit-closet-copy { display: grid; gap: .85rem; overflow-wrap: anywhere; }
-.outfit-closet-copy h3 { font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.1; }
+.outfit-closet-demo, .contribution-demo { margin: 0; }
+.outfit-closet-demo img, .contribution-demo video { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
+.outfit-closet-demo figcaption, .contribution-demo figcaption { margin-top: .75rem; }
+.outfit-closet-copy, .contribution-copy { display: grid; gap: .85rem; overflow-wrap: anywhere; }
+.outfit-closet-copy h3, .contribution-copy h3 { font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.1; }
 .outfit-closet-copy h4 { color: var(--warm-accent); }
-.outfit-closet-copy code { color: var(--warm-accent); }
+.outfit-closet-copy code, .contribution-copy code { color: var(--warm-accent); }
 @media (max-width: 820px) {
-  .outfit-closet { grid-template-columns: 1fr; }
+  .outfit-closet, .contribution-feature { grid-template-columns: 1fr; }
 }
 .detail-cta { border-left: 5px solid #ef183d; }
 .detail-cta h2 { line-height: 1.1; }

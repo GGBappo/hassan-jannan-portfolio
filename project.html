@@ -10,11 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261106royal3">
-  <link rel="stylesheet" href="royal.css?v=20261113closet">
+  <link rel="stylesheet" href="royal.css?v=20261113shop">
   <script defer src="scripts/royal.js?v=20261106royal3"></script>
-  <script defer src="content.js?v=20261110rcbdrlead"></script>
+  <script defer src="content.js?v=20261113shop"></script>
   <script defer src="scripts/gallery.js?v=20261106royal3"></script>
-  <script defer src="scripts/project.js?v=20261113closet"></script>
+  <script defer src="scripts/project.js?v=20261113shop"></script>
 </head>
 <body>
   <header class="navbar scrolled" id="project-nav">
@@ -76,7 +76,7 @@
       <div class="container">
         <div class="section-intro reveal visible">
           <p class="section-kicker">Gallery</p>
-          <h2>See the game in action.</h2>
+          <h2 id="project-gallery-title">See the game in action.</h2>
         </div>
         <p class="gallery-hint">Scroll sideways or use the arrows to browse. Select any image or clip to enlarge it.</p>
         <div class="gallery-controls"><button class="button secondary" id="gallery-prev" type="button" aria-label="Scroll gallery left">← Previous</button><p id="gallery-status" aria-live="polite"></p><button class="button secondary" id="gallery-next" type="button" aria-label="Scroll gallery right">Next →</button><button class="button secondary" id="gallery-pause" type="button">Pause previews</button></div>
@@ -90,6 +90,22 @@
           <p class="section-kicker">Contribution</p>
           <h2>My contributions and lessons learned.</h2>
         </div>
+        <template id="item-shop-feature">
+          <article class="detail-panel contribution-feature" aria-labelledby="item-shop-title">
+            <figure class="contribution-demo">
+              <video controls playsinline loop preload="none" width="1280" height="720"
+                poster="assets/clips/Improvised3.jpg" aria-label="Item shop and tool interactions in an early RCBDr mission">
+                <source src="assets/clips/Improvised3.mp4" type="video/mp4">
+              </video>
+              <figcaption>Early prototype footage of the shop and tools in use.</figcaption>
+            </figure>
+            <div class="contribution-copy">
+              <h3 id="item-shop-title">Item Shop &amp; Tool Interactions</h3>
+              <p>I built a shop that turns a list of item assets into a menu players can buy from during a mission. <code>ItemShop</code> displays each tool’s sprite, price, and hint. <code>ItemShopPanel</code> checks whether the tool is already owned, asks <code>BudgetManager</code> to check affordability, and places a successful purchase in an open slot when one is available.</p>
+              <p>Once a tool is on the table, the player can drag it into place or sell it to free the slot. I used <code>InteractableItem</code> for shared input and movement, and item action types to describe what each tool can do.</p>
+            </div>
+          </article>
+        </template>
         <template id="outfit-closet-feature">
           <article class="detail-panel outfit-closet" aria-labelledby="outfit-closet-title">
             <figure class="outfit-closet-demo">

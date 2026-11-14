@@ -66,7 +66,13 @@
   renderOverview((project.detailOverview && project.detailOverview.length) ? project.detailOverview : [project.description || ""]);
   renderList("project-details-list", project.details || []);
   renderList("project-learnings-list", project.learnings || []);
-  if (project.slug === "rcbdr" && !pending) renderOutfitCloset();
+  if (project.slug === "rcbdr" && !pending) {
+    const shop = byId("item-shop-feature");
+    shop.replaceWith(shop.content.cloneNode(true));
+    renderOutfitCloset();
+    setText("project-gallery-title", "More clips to watch");
+    byId("project-contributions-section").after(byId("project-gallery-section"));
+  }
   window.ProjectGallery.render(project.media || []);
 
   function renderOutfitCloset() {

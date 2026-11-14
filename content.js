@@ -522,30 +522,27 @@ window.PORTFOLIO_CONTENT = {
         "Led discussions about next steps, assigned tasks, and worked with teammates to balance development priorities with their schedules."
       ],
       "learnings": [
-        "Separating item data from UI and shared behavior makes it easier to add tools without rewriting purchase logic.",
-        "Inspector-configured events give teammates a way to wire up new interactions while keeping shared code focused on behaviors used across tools.",
-        "Animator triggers, curves, and transitions gave me control over how the shop UI responds as players interact with it."
+        "I learned to separate item data from the shop UI. Shop_SO lists what the shop sells, Item_SO holds each tool’s sprite, price, hint, and actions, and ItemShop renders the listing. The same item data can drive both the menu and the tool that spawns in the scene.",
+        "I learned that purchasing and placing an item are separate steps. BudgetManager checks affordability and updates the balance. ItemShopPanel tracks ownership and maps spawned tools to slots. Selling clears the slot and makes the tool available to buy again. Following that flow showed me why I need to check for a free slot before charging the player.",
+        "I learned to keep common input behavior in InteractableItem and define tool capabilities as action types. A camera ray projected onto a plane keeps a dragged tool under the cursor. Item action data lets tools share behavior across different appearances, while Inspector-configured Unity Events let the team connect puzzle reactions in the scene.",
+        "Returning tools taught me to handle physics and input together. During the animated return, the tool stops accepting drag input and temporarily disables gravity and its collider. A separate fall-detection trigger uses the shop’s slot lookup to move a dropped tool back to its spawn point.",
+        "I learned how a single gameplay event can support different kinds of feedback. BombTimer applies a larger time penalty on successive strikes and publishes the new strike count. Tooltips uses that count to select a hint for the hovered, unsolved part and caps the index at the last configured hint.",
+        "Connecting outfits to PlayerStats taught me to route effects through the systems that own the state. The equipped outfit applies its effect at the start of a mission, and PlayerStats passes budget and time changes to BudgetManager and BombTimer.",
+        "I learned to coordinate the shop’s appearance with its input state. SidePanel uses Animator triggers to open and close, fades with a CanvasGroup, and turns off interaction and raycasts when the shop fades out so the hidden panel stops intercepting clicks."
       ],
       "media": [
         {
           "src": "assets/clips/Improvised1.mp4",
-          "alt": "RCBDr development clip 1",
-          "caption": "RCBDr development footage 1.",
+          "alt": "RCBDr shop panel animation in the Unity editor",
+          "caption": "Animating the shop panel in Unity.",
           "poster": "assets/clips/Improvised1.jpg",
           "type": "video"
         },
         {
           "src": "assets/clips/Improvised2.mp4",
-          "alt": "RCBDr development clip 2",
-          "caption": "RCBDr development footage 2.",
+          "alt": "A behind-the-scenes look at the RCBDr project in Unity",
+          "caption": "Behind the scenes in the Unity project.",
           "poster": "assets/clips/Improvised2.jpg",
-          "type": "video"
-        },
-        {
-          "src": "assets/clips/Improvised3.mp4",
-          "alt": "RCBDr development clip 3",
-          "caption": "RCBDr development footage 3.",
-          "poster": "assets/clips/Improvised3.jpg",
           "type": "video"
         }
       ],
