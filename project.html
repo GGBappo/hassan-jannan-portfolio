@@ -10,11 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261106royal3">
-  <link rel="stylesheet" href="royal.css?v=20261106royal3">
+  <link rel="stylesheet" href="royal.css?v=20261113closet">
   <script defer src="scripts/royal.js?v=20261106royal3"></script>
   <script defer src="content.js?v=20261110rcbdrlead"></script>
   <script defer src="scripts/gallery.js?v=20261106royal3"></script>
-  <script defer src="scripts/project.js?v=20261109rcbdr"></script>
+  <script defer src="scripts/project.js?v=20261113closet"></script>
 </head>
 <body>
   <header class="navbar scrolled" id="project-nav">
@@ -90,6 +90,32 @@
           <p class="section-kicker">Contribution</p>
           <h2>My contributions and lessons learned.</h2>
         </div>
+        <template id="outfit-closet-feature">
+          <article class="detail-panel outfit-closet" aria-labelledby="outfit-closet-title">
+            <figure class="outfit-closet-demo">
+              <img src="assets/clips/rcbdr-outfit-closet.jpg" data-animation="assets/clips/rcbdr-outfit-closet.gif"
+                width="572" height="322" loading="lazy" alt="Four outfits hang from a rotating rack. The closet shows the selected outfit and whether it is locked, available, or equipped.">
+              <figcaption>
+                <button class="button secondary" type="button" aria-pressed="false">Play closet demo</button>
+              </figcaption>
+            </figure>
+            <div class="outfit-closet-copy">
+              <h3 id="outfit-closet-title">Interactive Outfit Closet | RCBDr</h3>
+              <p>I built a rotating outfit closet in Unity that lets players browse four outfits, see which ones are locked, and equip an available outfit. The rack opens on the outfit they’re wearing. When they browse back to it, the button reads <strong>Equipped</strong>. Each sprite follows its hook, faces the camera, and sways gently from its hanging point.</p>
+
+              <h4>How I built it</h4>
+              <p>The part I enjoyed most was making the rack and the sprites move differently. I used <code>Quaternion.AngleAxis</code> to calculate each quarter-turn and <code>Quaternion.Slerp</code> to interpolate between the start and end poses. An <code>IEnumerator</code> coroutine advances the turn across frames with <code>yield return null</code>, while <code>Mathf.SmoothStep</code> eases the rack into and out of motion. For the sprites, I combined <code>Quaternion.LookRotation</code> with a small roll driven by <code>Mathf.Sin</code>. That let each sprite swing from the top while keeping its face visible as the rack turned.</p>
+
+              <h4>What I learned</h4>
+              <ul class="detail-list">
+                <li><strong>Actions and events.</strong> I learned how a method gets connected to an <code>Action</code> event. The rotator subscribes with <code>+=</code>, and the clothing manager fires the event with <code>?.Invoke()</code>. That let me keep outfit selection separate from the animation.</li>
+                <li><strong>Lambdas and operators.</strong> I used a lambda (<code>=&gt;</code>) with <code>FindIndex</code> to check each slot for the equipped outfit, <code>&amp;&amp;</code> to skip the data check on an empty entry, and <code>? :</code> to choose a fallback. I also practiced using <code>?.</code> to read a nullable entry or fire an event with no listeners.</li>
+                <li><strong>Math and animation.</strong> I used <code>%</code> to wrap the selection between the first and last outfits, <code>Mathf.Max</code> to handle a failed search, and Unity’s interpolation and trigonometry functions to shape how the rack and sprites move.</li>
+                <li><strong>Enums and state.</strong> Working with the existing <code>BuffType</code> enum gave me more practice using named values such as <code>Time</code>, <code>Money</code>, <code>Sus</code>, and <code>None</code> to represent gameplay choices and handle them in a <code>switch</code>. I also used <code>try</code> and <code>finally</code> to make sure the temporary navigation guard resets if a callback throws.</li>
+              </ul>
+            </div>
+          </article>
+        </template>
         <div class="case-study-work-grid">
           <article class="detail-panel reveal visible">
             <p class="detail-panel-kicker" id="project-details-heading">What I worked on</p>

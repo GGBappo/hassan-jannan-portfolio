@@ -66,7 +66,32 @@
   renderOverview((project.detailOverview && project.detailOverview.length) ? project.detailOverview : [project.description || ""]);
   renderList("project-details-list", project.details || []);
   renderList("project-learnings-list", project.learnings || []);
+  if (project.slug === "rcbdr" && !pending) renderOutfitCloset();
   window.ProjectGallery.render(project.media || []);
+
+  function renderOutfitCloset() {
+    const template = byId("outfit-closet-feature");
+    const feature = template.content.cloneNode(true);
+    const image = feature.querySelector("img");
+    const button = feature.querySelector("button");
+    const stillImage = image.getAttribute("src");
+
+    function setPlaying(playing) {
+      image.src = playing ? image.dataset.animation : stillImage;
+      button.setAttribute("aria-pressed", String(playing));
+      button.textContent = playing ? "Stop closet demo" : "Play closet demo";
+    }
+
+    button.addEventListener("click", function () {
+      setPlaying(button.getAttribute("aria-pressed") !== "true");
+    });
+    window.addEventListener("portfolio-motion-change", function (event) {
+      if (event.detail.reduced && button.getAttribute("aria-pressed") === "true") {
+        setPlaying(false);
+      }
+    });
+    template.replaceWith(feature);
+  }
 
   function applyTheme(theme) {
     setVar("--accent", theme.accent);
