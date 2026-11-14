@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20261106royal3">
-  <link rel="stylesheet" href="royal.css?v=20261113shop">
+  <link rel="stylesheet" href="royal.css?v=20261113shop-copy">
   <script defer src="scripts/royal.js?v=20261106royal3"></script>
   <script defer src="content.js?v=20261113shop"></script>
   <script defer src="scripts/gallery.js?v=20261106royal3"></script>
@@ -101,8 +101,17 @@
             </figure>
             <div class="contribution-copy">
               <h3 id="item-shop-title">Item Shop &amp; Tool Interactions</h3>
-              <p>I built a shop that turns a list of item assets into a menu players can buy from during a mission. <code>ItemShop</code> displays each tool’s sprite, price, and hint. <code>ItemShopPanel</code> checks whether the tool is already owned, asks <code>BudgetManager</code> to check affordability, and places a successful purchase in an open slot when one is available.</p>
-              <p>Once a tool is on the table, the player can drag it into place or sell it to free the slot. I used <code>InteractableItem</code> for shared input and movement, and item action types to describe what each tool can do.</p>
+              <p>I built a mission shop where players spend their budget on tools, drag them into place, and sell them to free up space on the table.</p>
+
+              <h4>How I built it</h4>
+              <p><code>ItemShop</code> displays each tool’s sprite, price, and hint from <code>Item_SO</code>. <code>ItemShopPanel</code> checks ownership and affordability, then uses a dictionary to track which tools occupy each spawn point.</p>
+
+              <h4>What I learned</h4>
+              <ul class="detail-list">
+                <li><strong>Purchase order.</strong> Tracing the budget and slot checks showed me why a shop should confirm space before charging the player.</li>
+                <li><strong>Drag behavior.</strong> Projecting a camera ray onto a plane at the tool’s height kept it under the cursor.</li>
+                <li><strong>UI input.</strong> I learned to disable the shop’s raycasts as it fades out so it stops intercepting clicks.</li>
+              </ul>
             </div>
           </article>
         </template>
