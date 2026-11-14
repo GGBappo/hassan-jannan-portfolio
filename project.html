@@ -100,12 +100,12 @@
                 </video>
                 <figcaption>Early prototype footage of the shop and tools in use.</figcaption>
               </figure>
-              <h4>What the team added this cycle</h4>
+              <h4>What I added</h4>
               <ul class="detail-list">
-                <li>A working countdown timer and a strike system that tracks mistakes and increases pressure.</li>
-                <li>Mission tasks players can complete while defusing bombs.</li>
-                <li>Tools that interact directly with bomb components, plus working wire mechanics.</li>
-                <li>A more interactive, responsive interface.</li>
+                <li>A shop that checks the player’s budget and places purchased tools in open slots.</li>
+                <li>Tool dragging, selling, and interactions with bomb components.</li>
+                <li>Mission tasks that reward players with money and hints that change with the strike count.</li>
+                <li>An animated shop panel that stops intercepting clicks when hidden.</li>
               </ul>
             </div>
             <div class="contribution-copy">
@@ -127,13 +127,21 @@
         </template>
         <template id="outfit-closet-feature">
           <article class="detail-panel outfit-closet" aria-labelledby="outfit-closet-title">
-            <figure class="outfit-closet-demo">
-              <img src="assets/clips/rcbdr-outfit-closet.jpg" data-animation="assets/clips/rcbdr-outfit-closet.gif"
-                width="572" height="322" loading="lazy" alt="Four outfits hang from a rotating rack. The closet shows the selected outfit and whether it is locked, available, or equipped.">
-              <figcaption>
-                <button class="button secondary" type="button" aria-pressed="false">Play closet demo</button>
-              </figcaption>
-            </figure>
+            <div class="outfit-closet-copy">
+              <figure class="outfit-closet-demo">
+                <img src="assets/clips/rcbdr-outfit-closet.jpg" data-animation="assets/clips/rcbdr-outfit-closet.gif"
+                  width="572" height="322" loading="lazy" alt="Four outfits hang from a rotating rack. The closet shows the selected outfit and whether it is locked, available, or equipped.">
+                <figcaption>
+                  <button class="button secondary" type="button" aria-pressed="false">Play closet demo</button>
+                </figcaption>
+              </figure>
+              <h4>What I added</h4>
+              <ul class="detail-list">
+                <li>A rotating rack that opens on the equipped outfit and cycles through four options.</li>
+                <li>Controls that show which outfits are locked, available to equip, or already equipped.</li>
+                <li>Outfit sprites that sway from their hooks and stay facing the camera as the rack turns.</li>
+              </ul>
+            </div>
             <div class="outfit-closet-copy">
               <h3 id="outfit-closet-title">Interactive Outfit Closet | RCBDr</h3>
               <p>I built a rotating outfit closet in Unity that lets players browse four outfits, see which ones are locked, and equip an available outfit. The rack opens on the outfit they’re wearing. When they browse back to it, the button reads <strong>Equipped</strong>. Each sprite follows its hook, faces the camera, and sways gently from its hanging point.</p>
